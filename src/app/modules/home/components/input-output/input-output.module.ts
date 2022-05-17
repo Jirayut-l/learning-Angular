@@ -1,27 +1,29 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {AliasingComponent} from "../../pages/input-output/aliasing";
-import  {SizerComponent} from "../../pages/input-output/sizer";
+import {SizerComponent} from "../../pages/input-output/sizer";
 import {ItemOutputComponent} from "../../pages/input-output/item-output";
 import {ItemDetailComponent} from "../../pages/input-output/item-detail";
-import  {InTheMetadataComponent} from "../../pages/input-output/in-the-metadata";
-import  {ItemInputOutputComponent} from "../../pages/input-output/item-input-output";
+import {InTheMetadataComponent} from "../../pages/input-output/in-the-metadata";
+import {ItemInputOutputComponent} from "../../pages/input-output/item-input-output";
+import {HeroInputOutputComponent} from "../../pages/input-output/hero-input-output";
 
 
 @NgModule({
-  declarations: [ AliasingComponent,
+  declarations: [AliasingComponent,
     SizerComponent,
     ItemOutputComponent,
     ItemDetailComponent,
     InTheMetadataComponent,
-    ItemInputOutputComponent],
+    ItemInputOutputComponent, HeroInputOutputComponent],
   exports: [
     AliasingComponent,
     SizerComponent,
     ItemOutputComponent,
     ItemDetailComponent,
     InTheMetadataComponent,
-    ItemInputOutputComponent
+    ItemInputOutputComponent,
+    HeroInputOutputComponent
   ],
   imports: [
     CommonModule

@@ -8,10 +8,11 @@ import  {InputOutputComponent} from "./components/input-output";
 import {InputOutputModule} from "./components/input-output/input-output.module";
 
 
+
 @NgModule({
   declarations: [
     HomeLayoutComponent,
-    InputOutputComponent
+    InputOutputComponent,
   ],
   imports: [
     CommonModule,
