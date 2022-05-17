@@ -1,19 +1,22 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavbarComponent } from './navbar';
-import { SiderbarComponent } from './siderbar';
+import { SidebarComponent } from './siderbar';
+import {RouterModule} from "@angular/router";
 
 
 @NgModule({
   declarations: [
     NavbarComponent,
-    SiderbarComponent
+    SidebarComponent
   ],
   exports: [
-    NavbarComponent
+    NavbarComponent,
+    SidebarComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ]
 })
 export class ComponentsModule { }

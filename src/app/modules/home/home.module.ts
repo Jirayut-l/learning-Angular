@@ -5,6 +5,7 @@ import {HomeLayoutComponent} from './layouts/home-layout';
 import {RouterModule} from "@angular/router";
 import { AliasingComponent } from './pages/input-output/aliasing';
 import { InputOutputComponent } from './components/input-output';
+import {ComponentsModule} from "../../shared/components/components.module";
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { InputOutputComponent } from './components/input-output';
   ],
   imports: [
     CommonModule,
-    RouterModule.forChild(HomeLayoutRouting)
+    RouterModule.forChild(HomeLayoutRouting),
+    ComponentsModule
   ]
 })
 export class HomeModule {
