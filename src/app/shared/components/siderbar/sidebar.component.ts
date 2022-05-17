@@ -5,7 +5,7 @@ export const ROUTES: RouteInfo[] = [
   {
     path: '/inputoutput',
     title: 'InputOutput',
-    icon: '',
+    icon: 'bi bi-input-cursor',
     class: ''
   },
 ];
