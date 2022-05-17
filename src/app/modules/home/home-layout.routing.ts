@@ -2,15 +2,17 @@ import {Routes} from "@angular/router";
 import {HomeLayoutComponent} from "./layouts/home-layout";
 import {InputOutputComponent} from "./components/input-output";
 
-export  const HomeLayoutRouting: Routes=[
+export const HomeLayoutRouting: Routes = [
   {
-    path:'',
+    path: '',
     component: HomeLayoutComponent,
-    children:[
+    children: [
       {
-        path:'',
-        children:[
-          {path:'inputoutput', component: InputOutputComponent}
+        path: '',
+        children: [
+          {
+            path: 'inputoutput', component: InputOutputComponent
+          }
         ]
       }
     ]
