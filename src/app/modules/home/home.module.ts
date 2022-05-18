@@ -6,6 +6,8 @@ import {RouterModule} from "@angular/router";
 import {ComponentsModule} from "../../shared/components/components.module";
 import  {InputOutputComponent} from "./components/input-output";
 import {InputOutputModule} from "./components/input-output/input-output.module";
+import {FormsModule} from "@angular/forms";
+
 
 
 
@@ -18,7 +20,8 @@ import {InputOutputModule} from "./components/input-output/input-output.module";
     CommonModule,
     RouterModule.forChild(HomeLayoutRouting),
     ComponentsModule,
-    InputOutputModule
+    InputOutputModule,
+    FormsModule,
   ]
 })
 export class HomeModule {

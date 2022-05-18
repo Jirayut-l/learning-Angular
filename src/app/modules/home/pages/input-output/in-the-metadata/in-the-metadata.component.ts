@@ -1,15 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'app-in-the-metadata',
   templateUrl: './in-the-metadata.component.html',
-  styleUrls: ['./in-the-metadata.component.scss']
+  styleUrls: ['./in-the-metadata.component.scss'],
+  inputs: ['clearanceItem'],
+  outputs: ['buyEvent']
 })
-export class InTheMetadataComponent implements OnInit {
+export class InTheMetadataComponent {
 
-  constructor() { }
+  buyEvent = new EventEmitter<string>();
+  clearanceItem: string = '';
 
-  ngOnInit(): void {
+  public buyIt(): void {
+    console.warn('Child says: emitting buyEvent with', this.clearanceItem);
+    this.buyEvent.emit(this.clearanceItem);
   }
-
 }

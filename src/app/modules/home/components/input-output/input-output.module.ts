@@ -7,6 +7,7 @@ import {ItemDetailComponent} from "../../pages/input-output/item-detail";
 import {InTheMetadataComponent} from "../../pages/input-output/in-the-metadata";
 import {ItemInputOutputComponent} from "../../pages/input-output/item-input-output";
 import {HeroInputOutputComponent} from "../../pages/input-output/hero-input-output";
+import {FormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import {HeroInputOutputComponent} from "../../pages/input-output/hero-input-outp
     HeroInputOutputComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ]
 })
 export class InputOutputModule {
