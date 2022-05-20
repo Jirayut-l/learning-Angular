@@ -18,11 +18,7 @@ export const ROUTES: RouteInfo[] = [
 export class SidebarComponent implements OnInit {
   menuItems: RouteInfo[] = [];
 
-  constructor() {
-  }
-
-  ngOnInit(): void {
+  public ngOnInit(): void {
     this.menuItems = ROUTES;
   }
-
 }

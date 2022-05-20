@@ -9,7 +9,7 @@
         "project": ["tsconfig.json"],
         "createDefaultProgram": true
       },
-      "plugins": ["@typescript-eslint", "@angular-eslint"],
+      "plugins": ["@typescript-eslint"],
       "extends": [
         "plugin:@angular-eslint/recommended",
         "plugin:@angular-eslint/template/process-inline-templates"
@@ -34,11 +34,10 @@
         "@angular-eslint/no-empty-lifecycle-method": "warn",
         "@typescript-eslint/no-unused-vars": ["error"],
         "@typescript-eslint/consistent-type-definitions": [
-          "error",
+          "warn",
           "interface"
         ],
-        "@typescript-eslint/typedef": [
-          "error",
+        "@typescript-eslint/typedef": ["error",
           {
             "parameter": true
           }

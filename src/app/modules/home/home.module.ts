@@ -9,8 +9,6 @@ import {InputOutputModule} from "./components/input-output/input-output.module";
 import {FormsModule} from "@angular/forms";
 
 
-
-
 @NgModule({
   declarations: [
     HomeLayoutComponent,

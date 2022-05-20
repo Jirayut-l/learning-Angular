@@ -1,11 +1,11 @@
-import {Component, EventEmitter, Input, Output, SimpleChanges} from '@angular/core';
+import {Component, EventEmitter, Input, OnChanges, Output, SimpleChanges} from '@angular/core';
 
 @Component({
   selector: 'app-sizer',
   templateUrl: './sizer.component.html',
   styleUrls: ['./sizer.component.scss']
 })
-export class SizerComponent {
+export class SizerComponent implements OnChanges {
 
   @Input() public priceValue: number = 0;
   @Output() public priceChange = new EventEmitter<number>();
