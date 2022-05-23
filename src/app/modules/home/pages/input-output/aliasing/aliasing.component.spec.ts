@@ -8,9 +8,9 @@ describe('AliasingComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AliasingComponent ]
+      declarations: [AliasingComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

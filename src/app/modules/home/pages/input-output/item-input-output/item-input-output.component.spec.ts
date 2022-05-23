@@ -8,9 +8,9 @@ describe('ItemInputOutputComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ItemInputOutputComponent ]
+      declarations: [ItemInputOutputComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

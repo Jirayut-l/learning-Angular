@@ -1,6 +1,6 @@
-import {Routes} from "@angular/router";
-import {HomeLayoutComponent} from "./layouts/home-layout";
-import {InputOutputComponent} from "./components/input-output";
+import { Routes } from "@angular/router";
+import { HomeLayoutComponent } from "./layouts/home-layout";
+import { InputOutputComponent } from "./components/input-output";
 
 export const HomeLayoutRouting: Routes = [
   {

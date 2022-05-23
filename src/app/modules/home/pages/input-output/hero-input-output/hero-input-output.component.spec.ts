@@ -8,9 +8,9 @@ describe('HeroInputOutputComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HeroInputOutputComponent ]
+      declarations: [HeroInputOutputComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

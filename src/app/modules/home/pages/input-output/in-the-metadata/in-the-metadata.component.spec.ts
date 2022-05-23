@@ -8,9 +8,9 @@ describe('InTheMetadataComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ InTheMetadataComponent ]
+      declarations: [InTheMetadataComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

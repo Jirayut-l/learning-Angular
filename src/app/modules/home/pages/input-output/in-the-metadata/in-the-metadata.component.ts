@@ -1,4 +1,5 @@
-import {Component, EventEmitter} from '@angular/core';
+import { Component, EventEmitter } from '@angular/core';
+
 //don't support style in current version  in ignore line shouldn't
 @Component({
   selector: 'app-in-the-metadata',

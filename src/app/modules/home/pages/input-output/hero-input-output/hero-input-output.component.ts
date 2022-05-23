@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, OnChanges, Output, SimpleChanges} from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, Output, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-hero-input-output',
@@ -8,6 +8,7 @@ import {Component, EventEmitter, Input, OnChanges, Output, SimpleChanges} from '
 export class HeroInputOutputComponent implements OnChanges {
   @Input() public name: string = "";
   @Output() public liked = new EventEmitter();
+
   // @Output() nameChange = new EventEmitter<string>();
 
   ngOnChanges(changes: SimpleChanges): void {

@@ -1,15 +1,23 @@
 {
   "root": true,
-  "ignorePatterns": ["projects/**/*"],
+  "ignorePatterns": [
+    "projects/**/*"
+  ],
   "overrides": [
     {
-      "files": ["*.ts"],
+      "files": [
+        "*.ts"
+      ],
       "parser": "@typescript-eslint/parser",
       "parserOptions": {
-        "project": ["tsconfig.json"],
+        "project": [
+          "tsconfig.json"
+        ],
         "createDefaultProgram": true
       },
-      "plugins": ["@typescript-eslint"],
+      "plugins": [
+        "@typescript-eslint"
+      ],
       "extends": [
         "plugin:@angular-eslint/recommended",
         "plugin:@angular-eslint/template/process-inline-templates"
@@ -32,17 +40,60 @@
           }
         ],
         "@angular-eslint/no-empty-lifecycle-method": "warn",
-        "@typescript-eslint/no-unused-vars": ["error"],
+        //Supported Rules
+        "@typescript-eslint/adjacent-overload-signatures": "error",
+        "@typescript-eslint/await-thenable": "error",
+        "@typescript-eslint/no-empty-interface": [
+          "error",
+          {
+            "allowSingleExtends": false
+          }
+        ],
+        "@typescript-eslint/no-explicit-any": [
+          "error",
+          {
+            "ignoreRestArgs": true
+          }
+        ],
+        "@typescript-eslint/no-extra-non-null-assertion": "error",
+        "@typescript-eslint/no-for-in-array": "error",
+        "@typescript-eslint/no-misused-new": "error",
+        "@typescript-eslint/no-non-null-asserted-optional-chain": "warn",
+        "@typescript-eslint/no-non-null-assertion": "warn",
+        "@typescript-eslint/no-unnecessary-type-constraint": "warn",
+        "@typescript-eslint/no-unsafe-argument": "error",
+        "@typescript-eslint/no-unsafe-call": "error",
+        "@typescript-eslint/no-unsafe-member-access": "error",
+        "@typescript-eslint/no-unsafe-return": "error",
+        "@typescript-eslint/no-var-requires": "error",
+        "@typescript-eslint/prefer-as-const": "warn",
+        "@typescript-eslint/prefer-namespace-keyword": "error",
+        "@typescript-eslint/restrict-plus-operands": "error",
+        "@typescript-eslint/unbound-method": [
+          "error",
+          {
+            "ignoreStatic": true
+          }
+        ],
+        //
+
+        //Extension Rules
+        "@typescript-eslint/no-unused-vars": [
+          "error"
+        ],
         "@typescript-eslint/consistent-type-definitions": [
           "warn",
           "interface"
         ],
-        "@typescript-eslint/typedef": ["error",
+        "@typescript-eslint/typedef": [
+          "error",
           {
             "parameter": true
           }
         ],
-        "@typescript-eslint/space-before-blocks": ["error"],
+        "@typescript-eslint/space-before-blocks": [
+          "error"
+        ],
         "@typescript-eslint/comma-dangle": [
           "error",
           {
@@ -53,27 +104,28 @@
             "enums": "only-multiline"
           }
         ],
-        "@typescript-eslint/no-empty-interface": "error",
-        "@typescript-eslint/adjacent-overload-signatures": "error",
-        "@typescript-eslint/await-thenable": "error",
         "@typescript-eslint/ban-types": "error",
-        "@typescript-eslint/no-explicit-any": "error",
         "@typescript-eslint/no-floating-promises": "error",
         "@typescript-eslint/no-invalid-void-type": "warn",
-        "@typescript-eslint/no-non-null-asserted-optional-chain": "warn",
-        "@typescript-eslint/no-non-null-assertion": "warn",
         "@typescript-eslint/explicit-function-return-type": [
           "error",
           {
             "allowExpressions": true
           }
         ],
-        "@typescript-eslint/no-extra-semi": ["error"]
+        "@typescript-eslint/no-extra-semi": [
+          "error"
+        ]
+        //
       }
     },
     {
-      "files": ["*.html"],
-      "extends": ["plugin:@angular-eslint/template/recommended"],
+      "files": [
+        "*.html"
+      ],
+      "extends": [
+        "plugin:@angular-eslint/template/recommended"
+      ],
       "rules": {}
     }
   ]

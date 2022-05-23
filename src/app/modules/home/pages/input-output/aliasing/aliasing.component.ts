@@ -1,4 +1,5 @@
-import {Component, EventEmitter, Input, Output} from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+
 //don't support style in current version  in ignore line shouldn't
 @Component({
   selector: 'app-aliasing',
