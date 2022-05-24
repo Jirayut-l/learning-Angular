@@ -81,10 +81,6 @@
         "@typescript-eslint/no-unused-vars": [
           "error"
         ],
-        "@typescript-eslint/consistent-type-definitions": [
-          "warn",
-          "interface"
-        ],
         "@typescript-eslint/typedef": [
           "error",
           {
@@ -115,7 +111,14 @@
         ],
         "@typescript-eslint/no-extra-semi": [
           "error"
-        ]
+        ],
+        "@typescript-eslint/no-empty-function": [
+          "error"
+        ],
+        "@typescript-eslint/no-implied-eval": [
+          "error"
+        ],
+        "@typescript-eslint/require-await": "error"
         //
       }
     },
