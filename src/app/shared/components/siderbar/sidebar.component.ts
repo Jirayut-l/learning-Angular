@@ -8,6 +8,12 @@ export const ROUTES: RouteInfo[] = [
     icon: 'bi bi-input-cursor',
     class: ''
   },
+  {
+    path: '/pipesdirectives',
+    title: 'PipesDirectives',
+    icon: 'bi bi-input-cursor',
+    class: ''
+  },
 ];
 
 @Component({

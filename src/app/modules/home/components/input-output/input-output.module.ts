@@ -16,7 +16,8 @@ import { FormsModule } from "@angular/forms";
     ItemOutputComponent,
     ItemDetailComponent,
     InTheMetadataComponent,
-    ItemInputOutputComponent, HeroInputOutputComponent],
+    ItemInputOutputComponent,
+    HeroInputOutputComponent],
   exports: [
     AliasingComponent,
     SizerComponent,
