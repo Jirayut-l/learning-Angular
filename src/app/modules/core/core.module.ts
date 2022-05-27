@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NavbarComponent } from './navbar';
-import { SidebarComponent } from './siderbar';
+import { NavbarComponent } from './components/navbar';
+import { SidebarComponent } from './components/siderbar';
 import { RouterModule } from "@angular/router";
 
 
@@ -19,5 +19,5 @@ import { RouterModule } from "@angular/router";
     RouterModule
   ]
 })
-export class ComponentsModule {
+export class CoreModule {
 }

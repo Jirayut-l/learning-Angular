@@ -4,7 +4,7 @@ import { FormsModule } from "@angular/forms";
 import { RouterModule } from "@angular/router";
 import { HomeLayoutRouting } from './home-layout.routing';
 import { HomeLayoutComponent } from './layouts/home-layout';
-import { ComponentsModule } from "../../shared/components/components.module";
+import { CoreModule } from "../core/core.module";
 import { InputOutputComponent } from "./components/input-output";
 import { InputOutputModule } from "./components/input-output/input-output.module";
 import { PipesDirectivesModule } from './components/pipes-directives/pipes-directives.module';
@@ -20,7 +20,7 @@ import { PipesDirectivesComponent } from './components/pipes-directives';
     CommonModule,
     FormsModule,
     RouterModule.forChild(HomeLayoutRouting),
-    ComponentsModule,
+    CoreModule,
     InputOutputModule,
     PipesDirectivesModule,
   ]
