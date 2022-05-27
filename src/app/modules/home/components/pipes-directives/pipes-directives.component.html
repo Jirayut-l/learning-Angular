@@ -1,4 +1,23 @@
-<!--<app-conditionally [name]="'Boothstomper'" ></app-conditionally>-->
-<!--<app-conditionally [name]="'Drogfisher'" ></app-conditionally>-->
-<!--<app-switching-templates></app-switching-templates>-->
-<p>sdasdad</p>
+<app-conditionally [name]="'Boothstomper'"></app-conditionally>
+<app-conditionally [name]="'Drogfisher'"></app-conditionally>
+<app-switching-templates></app-switching-templates>
+<app-pipes></app-pipes>
+
+<p appCopyright></p>
+<p appAppHighLight>
+  This Text has blue Border
+</p>
+
+<p>Directive Numeric </p>
+<input appNumeric />
+<hr>
+
+<h2>UnlessDirective</h2>
+<div *appPermission="['admin', 'agent']">
+  <h3>This area can be accessed by admins and agents only UnlessDirective</h3>
+</div>
+
+<h4>UnlessDirective with template</h4>
+<ng-template [appPermission]="['admin', 'agent']">
+  <h3>This area can be accessed by admins and agents only</h3>
+</ng-template>

@@ -7,19 +7,22 @@ import { HomeLayoutComponent } from './layouts/home-layout';
 import { ComponentsModule } from "../../shared/components/components.module";
 import { InputOutputComponent } from "./components/input-output";
 import { InputOutputModule } from "./components/input-output/input-output.module";
+import { PipesDirectivesModule } from './components/pipes-directives/pipes-directives.module';
+import { PipesDirectivesComponent } from './components/pipes-directives';
 
 @NgModule({
   declarations: [
     HomeLayoutComponent,
     InputOutputComponent,
-
+    PipesDirectivesComponent,
   ],
   imports: [
     CommonModule,
+    FormsModule,
     RouterModule.forChild(HomeLayoutRouting),
     ComponentsModule,
     InputOutputModule,
-    FormsModule,
+    PipesDirectivesModule,
   ]
 })
 export class HomeModule { }

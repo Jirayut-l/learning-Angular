@@ -14,6 +14,7 @@ import { ComponentsModule } from './shared/components/components.module';
     ComponentsModule,
   ],
   providers: [],
+  exports: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {
