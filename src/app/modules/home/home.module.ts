@@ -9,12 +9,15 @@ import { InputOutputComponent } from "./components/input-output";
 import { InputOutputModule } from "./components/input-output/input-output.module";
 import { PipesDirectivesModule } from './components/pipes-directives/pipes-directives.module';
 import { PipesDirectivesComponent } from './components/pipes-directives';
+import { StructureInjectionModule } from './components/structure-injection/structure-injection.module';
+import { StructureInjectionComponent } from './components/structure-injection/structure-injection.component';
 
 @NgModule({
   declarations: [
     HomeLayoutComponent,
     InputOutputComponent,
     PipesDirectivesComponent,
+    StructureInjectionComponent
   ],
   imports: [
     CommonModule,
@@ -23,6 +26,7 @@ import { PipesDirectivesComponent } from './components/pipes-directives';
     CoreModule,
     InputOutputModule,
     PipesDirectivesModule,
+    StructureInjectionModule
   ]
 })
 export class HomeModule {

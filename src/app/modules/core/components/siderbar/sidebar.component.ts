@@ -14,6 +14,12 @@ export const ROUTES: RouteInfo[] = [
     icon: 'bi bi-input-cursor',
     class: ''
   },
+  {
+    path: '/structure-injection',
+    title: 'Structure-Injection',
+    icon: 'bi bi-input-cursor',
+    class: ''
+  }
 ];
 
 @Component({
