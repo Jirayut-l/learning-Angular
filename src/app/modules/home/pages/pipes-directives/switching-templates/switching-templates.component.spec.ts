@@ -8,9 +8,9 @@ describe('SwitchingTemplatesComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SwitchingTemplatesComponent ]
+      declarations: [SwitchingTemplatesComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

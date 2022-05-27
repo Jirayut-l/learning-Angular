@@ -25,4 +25,5 @@ import { PipesDirectivesComponent } from './components/pipes-directives';
     PipesDirectivesModule,
   ]
 })
-export class HomeModule { }
+export class HomeModule {
+}

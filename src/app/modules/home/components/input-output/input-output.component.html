@@ -1,11 +1,11 @@
-<app-hero-input-output [name]="hero" (liked)="onLike()"></app-hero-input-output>
+<app-hero-input-output (liked)="onLike()" [name]="hero"></app-hero-input-output>
 <!--<app-hero [name]="hero" (nameChange)="hero=$event"></app-hero>-->
 <hr>
 
 <h2>Input and Output in the component class metadata</h2>
 <p>Open the console to see the EventEmitter at work when you click Buy.</p>
 <p style="color: red">*Use @Input rather than the `inputs` metadata property</p>
-<app-in-the-metadata [clearanceItem]="lastChanceItem" (buyEvent)="buyClearanceItem($event)"></app-in-the-metadata>
+<app-in-the-metadata (buyEvent)="buyClearanceItem($event)" [clearanceItem]="lastChanceItem"></app-in-the-metadata>
 <hr>
 
 
@@ -23,31 +23,31 @@
 
 <h2>Input and Output together</h2>
 <p>Open the console to see the EventEmitter at work when you click Delete.</p>
-<app-item-input-output [item]="currentItem" (deleteRequest)="crossOffItem($event)"></app-item-input-output>
+<app-item-input-output (deleteRequest)="crossOffItem($event)" [item]="currentItem"></app-item-input-output>
 <hr>
 
 
 <h1 id="two-way">Two-way Binding</h1>
 <div id="two-way-1">
-  <app-sizer [(size)]="fontSizePx" [priceValue]="price" (priceChange)="price=$event"></app-sizer>
+  <app-sizer (priceChange)="price=$event" [(size)]="fontSizePx" [priceValue]="price"></app-sizer>
   <div [style.font-size.px]="fontSizePx">Resizable Text</div>
   <label>FontSize (px): <input [(ngModel)]="fontSizePx"/></label>
 </div>
 <br>
 <div id="two-way-2">
   <h2>De-sugared two-way binding</h2>
-  <app-sizer [size]="fontSizePx" (sizeChange)="fontSizePx=$event" [priceValue]="price"
-             (priceChange)="price=$event"></app-sizer>
+  <app-sizer (priceChange)="price=$event" (sizeChange)="fontSizePx=$event" [priceValue]="price"
+             [size]="fontSizePx"></app-sizer>
 </div>
 <hr>
 
 
 <p>input2 : <input [(ngModel)]="currentItem2"/></p>
 <app-aliasing
-  [saveForLaterItem1]="currentItem"
-  [wishListItem]="currentItem2"
   (saveForLaterEvent1)="saveForLater($event)"
-  (wishEvent)="addToWishList($event)">
+  (wishEvent)="addToWishList($event)"
+  [saveForLaterItem1]="currentItem"
+  [wishListItem]="currentItem2">
 </app-aliasing>
 
 <h2>Wishlist:</h2>
@@ -57,8 +57,8 @@
 <hr>
 <div id="two-Test-1">
   <p>TestOneWay In Component</p>
-  <button type="button" (click)="decrease()" title="smaller">-</button>
-  <button type="button" (click)="increase()" title="bigger">+</button>
+  <button (click)="decrease()" title="smaller" type="button">-</button>
+  <button (click)="increase()" title="bigger" type="button">+</button>
   {{fontSizeOneWayPx}}
   <p [style.font-size.px]="fontSizeOneWayPx">Resizable Text: <input [(ngModel)]="fontSizeOneWayPx"/></p>
 </div>
