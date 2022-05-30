@@ -8,7 +8,7 @@ import { HeroDetailService } from '../../../services/hero-detail';
   styleUrls: ['./hero-detail.component.scss']
 })
 export class HeroDetailComponent implements OnInit {
-  public hero: Hero = {} as Hero
+  public hero: Hero = {} as Hero;
   @Input() public id: number = 0;
 
   constructor(private heroDetailService: HeroDetailService) {

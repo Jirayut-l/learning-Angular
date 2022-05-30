@@ -8,8 +8,8 @@ import { heroSquadFactory } from '../../../services/hero-squad';
   selector: 'app-favorite-heroes',
   templateUrl: './favorite-heroes.component.html',
   styleUrls: ['./favorite-heroes.component.scss'],
-  providers :[{
-    provide:HeroService,
+  providers: [{
+    provide: HeroService,
     useFactory: heroSquadFactory(true),
   }]
 })
