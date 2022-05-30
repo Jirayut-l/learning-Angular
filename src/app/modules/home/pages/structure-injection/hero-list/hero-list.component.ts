@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Hero } from 'src/app/shared/models/Hero';
-import { HeroService } from '../../../services/hero/hero.service';
-
+import { HeroService } from '../../../services/hero';
 
 @Component({
   selector: 'app-hero-list',
@@ -17,6 +16,7 @@ export class HeroListComponent implements OnInit {
 
   ngOnInit(): void {
     this.heroes = this.heroService.getHeroes();
+    console.log(this.heroes);
   }
 
 }
