@@ -13,7 +13,6 @@ export class PermissionDirective implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log(this.tmplRef, this.vc);
     if (this.appPermission.indexOf(this.currentRole) === -1) {
       this.vc.clear();
     } else {
