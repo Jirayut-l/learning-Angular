@@ -8,9 +8,9 @@ export class ProductService {
 
   public getProduct(): Product[] {
     return [
-      { productId: 1, name:'Memory Card', price: 500 },
-      { productId: 2, name:'Pen Drive', price: 750 },
-      { productId: 3, name:'Power Bank', price: 100 },
+      { productId: 1, name: 'Memory Card', price: 500 },
+      { productId: 2, name: 'Pen Drive', price: 750 },
+      { productId: 3, name: 'Power Bank', price: 100 },
     ]
   }
 }

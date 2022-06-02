@@ -1,5 +1,3 @@
-
-
 describe('SwitchingTemplatesComponent', () => {
   // let component: SwitchingTemplatesComponent;
   // let fixture: ComponentFixture<SwitchingTemplatesComponent>;

@@ -13,21 +13,21 @@ import { StructureInjectionModule } from './components/structure-injection/struc
 import { StructureInjectionComponent } from './components/structure-injection/structure-injection.component';
 
 @NgModule({
-    declarations: [
-        HomeLayoutComponent,
-        InputOutputComponent,
-        PipesDirectivesComponent,
-        StructureInjectionComponent
-    ],
-    imports: [
-        CommonModule,
-        FormsModule,
-        RouterModule.forChild(HomeLayoutRouting),
-        CoreModule,
-        InputOutputModule,
-        PipesDirectivesModule,
-        StructureInjectionModule
-    ]
+  declarations: [
+    HomeLayoutComponent,
+    InputOutputComponent,
+    PipesDirectivesComponent,
+    StructureInjectionComponent
+  ],
+  imports: [
+    CommonModule,
+    FormsModule,
+    RouterModule.forChild(HomeLayoutRouting),
+    CoreModule,
+    InputOutputModule,
+    PipesDirectivesModule,
+    StructureInjectionModule
+  ]
 })
 export class HomeModule {
 }

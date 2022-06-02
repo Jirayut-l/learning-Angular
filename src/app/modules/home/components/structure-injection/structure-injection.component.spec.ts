@@ -1,4 +1,3 @@
-
 describe('StructureInjectionComponent', () => {
   // let component: StructureInjectionComponent;
   // let fixture: ComponentFixture<StructureInjectionComponent>;

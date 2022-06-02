@@ -12,7 +12,7 @@ import { appSettings, APP_CONFIG, AppConfig } from 'src/app/shared/config/app';
 })
 
 export class StructureInjectionComponent {
-  title: string ="";
+  title: string = "";
   version: number = 0;
 
   constructor(@Inject(APP_CONFIG) config: AppConfig) {

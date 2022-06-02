@@ -4,7 +4,6 @@ import { Directive, Input, OnInit, TemplateRef, ViewContainerRef } from '@angula
   selector: '[appPermission]'
 })
 export class PermissionDirective implements OnInit {
-
   @Input() public appPermission: string[] = [];
   private currentRole = 'agent';
 
