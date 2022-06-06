@@ -1,19 +1,22 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { HttpClient } from '@angular/common/http';
+import { EnrichHeroService } from '../../../services/enrich-components';
 import { EnrichHeroListComponent } from './enrich-hero-list.component';
 
 describe('EnrichHeroListComponent', () => {
   let component: EnrichHeroListComponent;
-  let fixture: ComponentFixture<EnrichHeroListComponent>;
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [EnrichHeroListComponent]
-    })
-      .compileComponents();
-  });
+  let http: HttpClient;
+  // let fixture: ComponentFixture<EnrichHeroListComponent>;
+  // beforeEach(async () => {
+  //   await TestBed.configureTestingModule({
+  //     declarations: [EnrichHeroListComponent]
+  //   })
+  //     .compileComponents();
+  // });
   beforeEach(() => {
-    fixture = TestBed.createComponent(EnrichHeroListComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+    component = new EnrichHeroListComponent(new EnrichHeroService(http))
+    // fixture = TestBed.createComponent(EnrichHeroListComponent);
+    // component = fixture.componentInstance;
+    // fixture.detectChanges();
   });
   it('should create', () => {
     expect(component).toBeTruthy();

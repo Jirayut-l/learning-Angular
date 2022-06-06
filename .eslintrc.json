@@ -64,6 +64,7 @@
         "@typescript-eslint/no-unsafe-argument": "error",
         "@typescript-eslint/no-unsafe-call": "error",
         "@typescript-eslint/no-unsafe-member-access": "warn",
+        "@typescript-eslint/no-unsafe-return": "warn",
         "@typescript-eslint/no-var-requires": "error",
         "@typescript-eslint/prefer-as-const": "warn",
         "@typescript-eslint/prefer-namespace-keyword": "error",

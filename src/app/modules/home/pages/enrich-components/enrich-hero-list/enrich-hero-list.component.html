@@ -1,4 +1,8 @@
 <h3>My heroes</h3>
 <ul>
-  <li></li>
+  <li *ngFor="let hero of heroes">
+    <p>I am hero {{hero.name}} (id: {{hero.id}})</p>
+  </li>
 </ul>
+
+<p>test async Observable</p>
