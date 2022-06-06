@@ -6,7 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./input-output.component.scss']
 })
 export class InputOutputComponent {
-
   hero: string = 'Spectrum';
   currentItem: string = 'Television Input';
   items: string[] = ['item1', 'item2', 'item3', 'item4'];
@@ -52,5 +51,4 @@ export class InputOutputComponent {
   public decrease(): void {
     this.fontSizeOneWayPx -= 1;
   }
-
 }

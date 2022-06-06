@@ -3,7 +3,6 @@ import { Hero } from 'src/app/shared/models/Hero';
 import { HeroService } from '../../../services/hero';
 import { heroSquadFactory } from '../../../services/hero-squad';
 
-
 @Component({
   selector: 'app-favorite-heroes',
   templateUrl: './favorite-heroes.component.html',
@@ -13,9 +12,7 @@ import { heroSquadFactory } from '../../../services/hero-squad';
     useFactory: heroSquadFactory(true),
   }]
 })
-
 export class FavoriteHeroesComponent implements OnInit {
-
   heroes: Hero[] = [];
 
   constructor(private heroService: HeroService) {

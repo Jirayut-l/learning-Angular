@@ -6,7 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./pipes.component.scss']
 })
 export class PipesComponent {
-
   heroes = ['Boothstomper', 'Drogfisher', 'Bloodyllips', 'Mr Bu Moverse'];
   today = new Date();
   hero = {

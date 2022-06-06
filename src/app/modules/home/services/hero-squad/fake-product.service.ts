@@ -6,7 +6,6 @@ import { ProductService } from './product.service';
   providedIn: 'root'
 })
 export class FakeProductService extends ProductService {
-
   override getProduct(): Product[] {
     return [
       { productId: 1, name: 'Memory Card', price: 500 },

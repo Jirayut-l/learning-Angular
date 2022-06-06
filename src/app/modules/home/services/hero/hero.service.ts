@@ -5,7 +5,6 @@ import { Hero } from 'src/app/shared/models/Hero';
   providedIn: 'root'
 })
 export class HeroService {
-
   public getHeroes(): Hero[] {
     return [
       { id: 1, name: 'Boothstomper', team: 'avengers' },

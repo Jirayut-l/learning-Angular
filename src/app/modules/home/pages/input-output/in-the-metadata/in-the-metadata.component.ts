@@ -11,7 +11,6 @@ import { Component, EventEmitter } from '@angular/core';
   outputs: ['buyEvent']
 })
 export class InTheMetadataComponent {
-
   buyEvent = new EventEmitter<string>();
   clearanceItem: string = '';
 

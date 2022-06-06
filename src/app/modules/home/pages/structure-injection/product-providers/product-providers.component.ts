@@ -12,7 +12,6 @@ import { Product } from '../../../../../shared/models/Product/product.model';
   }]
 })
 export class ProductProvidersComponent implements OnInit {
-
   products: Product[] = [];
 
   constructor(private productService: ProductService) {
@@ -21,5 +20,4 @@ export class ProductProvidersComponent implements OnInit {
   ngOnInit(): void {
     this.products = this.productService.getProduct();
   }
-
 }

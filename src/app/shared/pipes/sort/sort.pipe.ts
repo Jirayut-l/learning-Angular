@@ -5,7 +5,6 @@ import { Hero } from '../../models/Hero';
   name: 'sort'
 })
 export class SortPipe implements PipeTransform {
-
   transform(value: Hero[], args: string): Hero[] {
     if (value) {
       return value.sort((a: Hero, b: Hero) => {
@@ -20,5 +19,4 @@ export class SortPipe implements PipeTransform {
     }
     return [];
   }
-
 }

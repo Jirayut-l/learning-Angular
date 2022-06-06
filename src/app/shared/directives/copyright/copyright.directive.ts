@@ -4,7 +4,6 @@ import { Directive, ElementRef, Renderer2 } from '@angular/core';
   selector: '[appCopyright]'
 })
 export class CopyrightDirective {
-
   constructor(private el: ElementRef, private renderer: Renderer2) {
     renderer.addClass(el.nativeElement, 'copyright');
     renderer.setProperty(

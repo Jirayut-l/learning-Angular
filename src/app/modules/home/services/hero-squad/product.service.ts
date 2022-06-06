@@ -5,7 +5,6 @@ import { Product } from 'src/app/shared/models/Product/product.model';
   providedIn: 'root'
 })
 export class ProductService {
-
   public getProduct(): Product[] {
     return [
       { productId: 1, name: 'Memory Card', price: 500 },

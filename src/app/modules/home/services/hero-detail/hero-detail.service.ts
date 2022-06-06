@@ -6,7 +6,6 @@ import { HeroService } from '../hero';
   providedIn: 'root'
 })
 export class HeroDetailService {
-
   hero: Hero = {} as Hero;
 
   constructor(private heroService: HeroService) {

@@ -19,6 +19,12 @@ export const ROUTES: RouteInfo[] = [
     title: 'Structure-Injection',
     icon: 'bi bi-input-cursor',
     class: ''
+  },
+  {
+    path: '/enrich-components',
+    title: 'Enrich Components with Async',
+    icon: 'bi bi-input-cursor',
+    class: ''
   }
 ];
 

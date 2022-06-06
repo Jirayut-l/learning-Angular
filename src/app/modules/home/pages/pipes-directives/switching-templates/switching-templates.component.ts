@@ -7,8 +7,6 @@ import { Hero } from 'src/app/shared/models/Hero';
   styleUrls: ['./switching-templates.component.scss']
 })
 export class SwitchingTemplatesComponent {
-
-
   public heroes: Hero[] = [
     { id: 1, name: 'Zebra', team: 'avengers' },
     { id: 2, name: 'Drogfisher', team: 'avengers' },
@@ -17,7 +15,6 @@ export class SwitchingTemplatesComponent {
     { id: 5, name: 'Piranhaelli', team: '' },
     { id: 6, name: 'Boothstomper', team: 'avengers' },
   ];
-
   public heroes2: Hero[] = [
     { id: 1, name: 'Zebra', team: 'avengers' },
     { id: 2, name: 'Drogfisher', team: 'avengers' },

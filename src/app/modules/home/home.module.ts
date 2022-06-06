@@ -5,19 +5,18 @@ import { RouterModule } from "@angular/router";
 import { HomeLayoutRouting } from './home-layout.routing';
 import { HomeLayoutComponent } from './layouts/home-layout';
 import { CoreModule } from "../core/core.module";
-import { InputOutputComponent } from "./components/input-output";
-import { InputOutputModule } from "./components/input-output/input-output.module";
-import { PipesDirectivesModule } from './components/pipes-directives/pipes-directives.module';
-import { PipesDirectivesComponent } from './components/pipes-directives';
-import { StructureInjectionModule } from './components/structure-injection/structure-injection.module';
-import { StructureInjectionComponent } from './components/structure-injection/structure-injection.component';
+import { InputOutputComponent, InputOutputModule } from "./components/input-output";
+import { PipesDirectivesComponent, PipesDirectivesModule } from './components/pipes-directives';
+import { StructureInjectionComponent, StructureInjectionModule } from './components/structure-injection';
+import { EnrichComponentsComponent, EnrichComponentsModule } from './components/enrich-components';
 
 @NgModule({
   declarations: [
     HomeLayoutComponent,
     InputOutputComponent,
     PipesDirectivesComponent,
-    StructureInjectionComponent
+    StructureInjectionComponent,
+    EnrichComponentsComponent
   ],
   imports: [
     CommonModule,
@@ -26,7 +25,8 @@ import { StructureInjectionComponent } from './components/structure-injection/st
     CoreModule,
     InputOutputModule,
     PipesDirectivesModule,
-    StructureInjectionModule
+    StructureInjectionModule,
+    EnrichComponentsModule
   ]
 })
 export class HomeModule {

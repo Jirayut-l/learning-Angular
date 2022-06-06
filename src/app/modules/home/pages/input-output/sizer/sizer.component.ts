@@ -6,7 +6,6 @@ import { Component, EventEmitter, Input, OnChanges, Output, SimpleChanges } from
   styleUrls: ['./sizer.component.scss']
 })
 export class SizerComponent implements OnChanges {
-
   @Input() public priceValue: number = 0;
   @Output() public priceChange = new EventEmitter<number>();
   @Input() public size: number = 0;
@@ -19,7 +18,6 @@ export class SizerComponent implements OnChanges {
   // public set price(value: number) {
   //   this.priceValue = value;
   // }
-
   public increase(): void {
     this.resize(+1);
   }
@@ -40,11 +38,9 @@ export class SizerComponent implements OnChanges {
     const price = changes['priceValue'];
     const oldValue = sizeValue.previousValue;
     const newValue = sizeValue.currentValue;
-
     if (!sizeValue.isFirstChange()) {
       console.log(`sizeValue changed from ${oldValue} to ${newValue}`);
       console.log(`priceValue changed from ${price.previousValue} to ${price.currentValue}`);
     }
   }
-
 }

@@ -6,10 +6,8 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrls: ['./item-input-output.component.scss']
 })
 export class ItemInputOutputComponent {
-
   @Input() public item: string = "";
   @Output() public deleteRequest = new EventEmitter<string>();
-
   lineThrough: string = "";
 
   public delete(): void {
@@ -17,5 +15,4 @@ export class ItemInputOutputComponent {
     this.deleteRequest.emit(this.item);
     this.lineThrough = this.lineThrough ? 'underline' : 'line-through';
   }
-
 }

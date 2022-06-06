@@ -75,6 +75,12 @@
             "ignoreStatic": true
           }
         ],
+        "@typescript-eslint/type-annotation-spacing": [
+          "error",
+          {
+            "after": true
+          }
+        ],
         //
 
         //Extension Rules
@@ -118,7 +124,10 @@
         "@typescript-eslint/no-implied-eval": [
           "error"
         ],
-        "@typescript-eslint/require-await": "error"
+        "@typescript-eslint/require-await": "error",
+        "@typescript-eslint/space-infix-ops": [
+          "error"
+        ]
         //
       }
     },

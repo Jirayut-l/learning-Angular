@@ -10,7 +10,6 @@ import { appSettings, APP_CONFIG, AppConfig } from 'src/app/shared/config/app';
     useValue: appSettings
   }]
 })
-
 export class StructureInjectionComponent {
   title: string = "";
   version: number = 0;

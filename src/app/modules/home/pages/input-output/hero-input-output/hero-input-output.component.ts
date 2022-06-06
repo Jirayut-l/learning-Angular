@@ -10,12 +10,10 @@ export class HeroInputOutputComponent implements OnChanges {
   @Output() public liked = new EventEmitter();
 
   // @Output() nameChange = new EventEmitter<string>();
-
   ngOnChanges(changes: SimpleChanges): void {
     const hero = changes['name'];
     const oldValue = hero.previousValue;
     const newValue = hero.currentValue;
-
     if (!hero.isFirstChange()) {
       console.log(`Hero changed from ${oldValue} to ${newValue}`);
     }

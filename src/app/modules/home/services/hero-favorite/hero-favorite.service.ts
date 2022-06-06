@@ -6,7 +6,6 @@ import { HeroService } from '../hero';
   providedIn: 'root'
 })
 export class HeroFavoriteService extends HeroService {
-
   constructor() {
     super();
   }

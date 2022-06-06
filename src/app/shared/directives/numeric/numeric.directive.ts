@@ -4,7 +4,6 @@ import { Directive, HostBinding, HostListener } from '@angular/core';
   selector: '[appNumeric]'
 })
 export class NumericDirective {
-
   @HostBinding('class') currentClass: string = "";
 
   @HostListener('keypress', ['$event'])

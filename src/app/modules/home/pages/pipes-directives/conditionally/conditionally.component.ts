@@ -6,7 +6,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./conditionally.component.scss']
 })
 export class ConditionallyComponent {
-
   @Input() public name: string = "";
-
 }

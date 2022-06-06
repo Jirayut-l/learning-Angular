@@ -6,6 +6,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./pipes-directives.component.scss']
 })
 export class PipesDirectivesComponent {
-
-
 }

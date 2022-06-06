@@ -12,5 +12,4 @@ export class ItemOutputComponent {
     console.log(`item-output.component : ${value} `);
     this.newItemEvent.emit(value);
   }
-
 }

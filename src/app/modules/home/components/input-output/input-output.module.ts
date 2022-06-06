@@ -9,7 +9,6 @@ import { ItemInputOutputComponent } from "../../pages/input-output/item-input-ou
 import { HeroInputOutputComponent } from "../../pages/input-output/hero-input-output";
 import { FormsModule } from "@angular/forms";
 
-
 @NgModule({
   declarations: [AliasingComponent,
     SizerComponent,
