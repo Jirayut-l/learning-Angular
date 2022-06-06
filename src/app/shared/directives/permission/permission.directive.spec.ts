@@ -1,5 +1,5 @@
-import { PermissionDirective } from './permission.directive';
 import { TemplateRef, ViewContainerRef } from '@angular/core';
+import { PermissionDirective } from './permission.directive';
 
 describe('PermissionDirective', () => {
   let tmplRef: TemplateRef<HTMLElement>;

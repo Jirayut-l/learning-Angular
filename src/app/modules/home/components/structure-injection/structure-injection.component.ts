@@ -1,5 +1,5 @@
 import { Component, Inject } from '@angular/core';
-import { appSettings, APP_CONFIG, AppConfig } from 'src/app/shared/config/app';
+import { APP_CONFIG, AppConfig, appSettings } from 'app/shared/config/app';
 
 @Component({
   selector: 'app-structure-injection',

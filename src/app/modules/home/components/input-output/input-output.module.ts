@@ -1,13 +1,13 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AliasingComponent } from "../../pages/input-output/aliasing";
-import { SizerComponent } from "../../pages/input-output/sizer";
-import { ItemOutputComponent } from "../../pages/input-output/item-output";
-import { ItemDetailComponent } from "../../pages/input-output/item-detail";
-import { InTheMetadataComponent } from "../../pages/input-output/in-the-metadata";
-import { ItemInputOutputComponent } from "../../pages/input-output/item-input-output";
-import { HeroInputOutputComponent } from "../../pages/input-output/hero-input-output";
+import { NgModule } from '@angular/core';
 import { FormsModule } from "@angular/forms";
+import { AliasingComponent } from "../../pages/input-output/aliasing";
+import { HeroInputOutputComponent } from "../../pages/input-output/hero-input-output";
+import { InTheMetadataComponent } from "../../pages/input-output/in-the-metadata";
+import { ItemDetailComponent } from "../../pages/input-output/item-detail";
+import { ItemInputOutputComponent } from "../../pages/input-output/item-input-output";
+import { ItemOutputComponent } from "../../pages/input-output/item-output";
+import { SizerComponent } from "../../pages/input-output/sizer";
 
 @NgModule({
   declarations: [AliasingComponent,

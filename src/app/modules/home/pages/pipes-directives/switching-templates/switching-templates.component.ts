@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Hero } from 'src/app/shared/models/Hero';
+import { Hero } from '@models/Hero';
 
 @Component({
   selector: 'app-switching-templates',

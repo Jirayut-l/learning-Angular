@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RouteInfo } from "../../../../shared/models/RouteInfo";
+import { RouteInfo } from "@models/RouteInfo";
 
 export const ROUTES: RouteInfo[] = [
   {

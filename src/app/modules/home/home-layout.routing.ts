@@ -1,9 +1,9 @@
 import { Routes } from "@angular/router";
-import { HomeLayoutComponent } from "./layouts/home-layout";
+import { EnrichComponentsComponent } from './components/enrich-components';
 import { InputOutputComponent } from "./components/input-output";
 import { PipesDirectivesComponent } from "./components/pipes-directives"
 import { StructureInjectionComponent } from './components/structure-injection';
-import { EnrichComponentsComponent } from './components/enrich-components';
+import { HomeLayoutComponent } from "./layouts/home-layout";
 
 export const HomeLayoutRouting: Routes = [
   {

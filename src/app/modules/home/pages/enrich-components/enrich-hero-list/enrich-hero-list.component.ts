@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Hero } from 'src/app/shared/models/Hero';
+import { Hero } from '@models/Hero';
 import { Observable } from 'rxjs';
 import { EnrichHeroService } from '../../../services/enrich-components';
 
