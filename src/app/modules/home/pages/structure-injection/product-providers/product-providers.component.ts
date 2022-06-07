@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from '@shared/models/Product';
-import { FakeProductService, ProductService } from '@home/services/hero-squad';
+import {ProductService,FakeProductService} from '@home/services/hero-squad';
 
 @Component({
   selector: 'app-product-providers',

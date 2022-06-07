@@ -1,19 +1,10 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { HeroService } from '@home/services/hero';
 import { FavoriteHeroesComponent } from './favorite-heroes.component';
 
 describe('FavoriteHeroesComponent', () => {
   let component: FavoriteHeroesComponent;
-  let fixture: ComponentFixture<FavoriteHeroesComponent>;
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [FavoriteHeroesComponent]
-    })
-      .compileComponents();
-  });
   beforeEach(() => {
-    fixture = TestBed.createComponent(FavoriteHeroesComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+    component = new FavoriteHeroesComponent(new HeroService());
   });
   it('should create', () => {
     expect(component).toBeTruthy();
