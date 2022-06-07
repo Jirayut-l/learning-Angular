@@ -2,13 +2,13 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule } from "@angular/forms";
 import { RouterModule } from "@angular/router";
-import { CoreModule } from "../core/core.module";
-import { EnrichComponentsComponent, EnrichComponentsModule } from './components/enrich-components';
-import { InputOutputComponent, InputOutputModule } from "./components/input-output";
-import { PipesDirectivesComponent, PipesDirectivesModule } from './components/pipes-directives';
-import { StructureInjectionComponent, StructureInjectionModule } from './components/structure-injection';
-import { HomeLayoutRouting } from './home-layout.routing';
-import { HomeLayoutComponent } from './layouts/home-layout';
+import { CoreModule } from "@core/core.module";
+import { EnrichComponentsComponent, EnrichComponentsModule } from '@home/components/enrich-components';
+import { InputOutputComponent, InputOutputModule } from "@home/components/input-output";
+import { PipesDirectivesComponent, PipesDirectivesModule } from '@home/components/pipes-directives';
+import { StructureInjectionComponent, StructureInjectionModule } from '@home/components/structure-injection';
+import { HomeLayoutRouting } from '@home/home-layout.routing';
+import { HomeLayoutComponent } from '@home/layouts/home-layout';
 
 @NgModule({
   declarations: [

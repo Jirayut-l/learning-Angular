@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Hero } from '@models/Hero';
+import { Hero } from '@shared/models/Hero';
 
 @Component({
   selector: 'app-switching-templates',
@@ -25,8 +25,8 @@ export class SwitchingTemplatesComponent {
     { id: 7, name: 'Mr Bu Moversesd', team: 'villains' },
   ];
 
-  public trackByHeroes(index: number, hero: Hero): number {
-    return hero?.id ?? 0;
+  public trackByHeroes(index: number, { id }: Hero): number {
+    return id as number;
   }
 
   public getNewHeroes(): void {

@@ -1,8 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from "@angular/router";
-import { NavbarComponent } from './components/navbar';
-import { SidebarComponent } from './components/siderbar';
+import { NavbarComponent } from '@core/components/navbar';
+import { SidebarComponent } from '@core/components/siderbar';
 
 @NgModule({
   declarations: [

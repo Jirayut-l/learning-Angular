@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Hero } from '@models/Hero';
+import { Hero } from '@shared/models/Hero';
 import { HeroService } from '../hero';
 
 @Injectable({
@@ -13,9 +13,7 @@ export class HeroDetailService {
 
   public getHero(id: number): Hero {
     const heroes = this.heroService.getHeroes();
-    if (!this.hero) {
-      return this.hero;
-    }
-    return this.hero = heroes.find(hero => hero.id == id) ?? this.hero;
+    const findIdHero = heroes.find(hero => hero.id === id) ?? this.hero;
+    return this.hero ? findIdHero : this.hero;
   }
 }
