@@ -2,13 +2,16 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { EnrichHeroListComponent } from '@home/pages/enrich-components/enrich-hero-list';
+import { KeyLoggerComponent } from '@home/pages/enrich-components/key-logger/key-logger.component';
 
 @NgModule({
   declarations: [
-    EnrichHeroListComponent
+    EnrichHeroListComponent,
+    KeyLoggerComponent
   ],
   exports: [
-    EnrichHeroListComponent
+    EnrichHeroListComponent,
+    KeyLoggerComponent
   ],
   imports: [
     CommonModule,

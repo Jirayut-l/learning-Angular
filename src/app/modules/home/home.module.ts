@@ -16,7 +16,7 @@ import { HomeLayoutComponent } from '@home/layouts/home-layout';
     InputOutputComponent,
     PipesDirectivesComponent,
     StructureInjectionComponent,
-    EnrichComponentsComponent
+    EnrichComponentsComponent,
   ],
   imports: [
     CommonModule,
@@ -26,8 +26,8 @@ import { HomeLayoutComponent } from '@home/layouts/home-layout';
     InputOutputModule,
     PipesDirectivesModule,
     StructureInjectionModule,
-    EnrichComponentsModule
-  ]
+    EnrichComponentsModule,
+  ],
 })
 export class HomeModule {
 }

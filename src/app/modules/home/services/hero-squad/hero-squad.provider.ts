@@ -3,6 +3,10 @@ import { HeroFavoriteService } from "../hero-favorite";
 
 export const heroSquadFactory = (isFavorite: boolean) => {
   return () => {
-    isFavorite ? new HeroFavoriteService() : new HeroService();
+    if (isFavorite) {
+      return new HeroFavoriteService()
+    } else {
+     return  new HeroService()
+    }
   };
 };
