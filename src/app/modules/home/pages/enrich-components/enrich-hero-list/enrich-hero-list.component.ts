@@ -1,31 +1,44 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { EnrichHeroService } from '@home/services/enrich-components';
 import { Hero } from '@shared/models/Hero';
-import { Observable } from 'rxjs';
+import { Observable, Subject, takeUntil } from 'rxjs';
 
 @Component({
   selector: 'app-enrich-hero-list',
   templateUrl: './enrich-hero-list.component.html',
   styleUrls: ['./enrich-hero-list.component.scss']
 })
-export class EnrichHeroListComponent implements OnInit {
+export class EnrichHeroListComponent implements OnInit, OnDestroy {
+  //public properties
   heroes: Hero[] = [];
   hero2: Observable<Hero[]> = new Observable<Hero[]>();
+  destroy$ = new Subject();
 
   constructor(private enrichHeroService: EnrichHeroService) {
   }
 
+  //lifecycle hook
   ngOnInit(): void {
     this.getHeroes();
   }
 
+  ngOnDestroy(): void {
+    this.destroy$.next(true);
+    this.destroy$.complete();
+  }
+
+  //public methods
   public addValue(name: string): void {
-    this.enrichHeroService.createHero(name).subscribe(hero => this.heroes.push(hero));
+    this.enrichHeroService.createHero(name)
+      .pipe(takeUntil(this.destroy$))
+      .subscribe(hero => this.heroes.push(hero));
   }
 
   public rename(hero: Hero): void {
     const existingHero: Hero = { id: hero.id, name: 'Pricezog', team: '' };
-    this.enrichHeroService.editHero(hero.id, existingHero).subscribe(() => {
+    this.enrichHeroService.editHero(hero.id, existingHero)
+      .pipe(takeUntil(this.destroy$))
+      .subscribe(() => {
       const hero = this.heroes.find(val => val.id === existingHero.id);
       if (hero) {
         hero.name = 'Pricezog';
@@ -34,13 +47,18 @@ export class EnrichHeroListComponent implements OnInit {
   }
 
   public remove(hero: Hero): void {
-    this.enrichHeroService.deleteHero(hero.id).subscribe(() => {
+    this.enrichHeroService.deleteHero(hero.id)
+      .pipe(takeUntil(this.destroy$))
+      .subscribe(() => {
       this.heroes = this.heroes.filter(selected => selected !== hero);
     });
   }
 
+  //private methods
   private getHeroes(): void {
-    this.enrichHeroService.getHeroes().subscribe(heroes => this.heroes = heroes);
+    this.enrichHeroService.getHeroes()
+      .pipe(takeUntil(this.destroy$))
+      .subscribe(res => this.heroes = res);
     this.hero2 = this.enrichHeroService.getHeroes();
   }
 }
