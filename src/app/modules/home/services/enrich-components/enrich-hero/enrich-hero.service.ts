@@ -35,4 +35,8 @@ export class EnrichHeroService {
   public deleteHero(id: number): Observable<unknown> {
     return this.http.delete(`${this.heroesUrl}${id}`);
   }
+
+  public getHero(id: number): Observable<Hero> {
+    return this.http.get<Hero>(`${this.heroesUrl}${id}`);
+  }
 }
