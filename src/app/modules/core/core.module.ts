@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from "@angular/router";
 import { NavbarComponent } from '@core/components/navbar';
 import { SidebarComponent } from '@core/components/siderbar';
+import { PageNotFoundComponent } from '@core/components/page-not-found';
 
 @NgModule({
   declarations: [
     NavbarComponent,
-    SidebarComponent
+    SidebarComponent,
+    PageNotFoundComponent
   ],
   exports: [
     NavbarComponent,

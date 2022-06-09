@@ -25,6 +25,12 @@ export const ROUTES: RouteInfo[] = [
     title: 'Enrich Components with Async',
     icon: 'bi bi-input-cursor',
     class: ''
+  },
+  {
+    path: '/navigate-with-routing',
+    title: 'Navigate With Routing',
+    icon: 'bi bi-input-cursor',
+    class: ''
   }
 ];
 

@@ -9,6 +9,7 @@ import { PipesDirectivesComponent, PipesDirectivesModule } from '@home/component
 import { StructureInjectionComponent, StructureInjectionModule } from '@home/components/structure-injection';
 import { HomeLayoutRouting } from '@home/home-layout.routing';
 import { HomeLayoutComponent } from '@home/layouts/home-layout';
+import { NavigateWithRoutingComponent,NavigateWithRoutingModule } from '@home/components/navigate-with-routing';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { HomeLayoutComponent } from '@home/layouts/home-layout';
     PipesDirectivesComponent,
     StructureInjectionComponent,
     EnrichComponentsComponent,
+    NavigateWithRoutingComponent,
   ],
   imports: [
     CommonModule,
@@ -27,6 +29,7 @@ import { HomeLayoutComponent } from '@home/layouts/home-layout';
     PipesDirectivesModule,
     StructureInjectionModule,
     EnrichComponentsModule,
+    NavigateWithRoutingModule
   ],
 })
 export class HomeModule {
