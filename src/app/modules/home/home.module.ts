@@ -11,6 +11,7 @@ import { HomeLayoutRouting } from '@home/home-layout.routing';
 import { HomeLayoutComponent } from '@home/layouts/home-layout';
 import { NavigateWithRoutingComponent,NavigateWithRoutingModule } from '@home/components/navigate-with-routing';
 
+
 @NgModule({
   declarations: [
     HomeLayoutComponent,

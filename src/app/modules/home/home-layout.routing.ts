@@ -15,20 +15,26 @@ export const HomeLayoutRouting: Routes = [
         path: '',
         children: [
           {
-            path: 'inputoutput', component: InputOutputComponent
+            path: 'inputoutput',
+            component: InputOutputComponent
           },
           {
-            path: 'pipesdirectives', component: PipesDirectivesComponent
+            path: 'pipesdirectives',
+            component: PipesDirectivesComponent
           },
           {
-            path: 'structure-injection', component: StructureInjectionComponent
+            path: 'structure-injection',
+            component: StructureInjectionComponent
           },
           {
-            path: 'enrich-components', component: EnrichComponentsComponent
+            path: 'enrich-components',
+            component: EnrichComponentsComponent
           },
           {
-            path: 'navigate-with-routing', component:NavigateWithRoutingComponent,
-            loadChildren:()=> import("./components/navigate-with-routing/navigate-with-routing.module").then(p=>p.NavigateWithRoutingModule)
+            path: 'navigate-with-routing',
+            component: NavigateWithRoutingComponent,
+            loadChildren: () => import("./components/navigate-with-routing/navigate-with-routing.module")
+              .then(p => p.NavigateWithRoutingModule)
           }
         ]
       }

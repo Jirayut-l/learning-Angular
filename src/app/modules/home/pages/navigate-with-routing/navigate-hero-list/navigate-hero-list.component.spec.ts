@@ -1,24 +1,19 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { TestBed } from '@angular/core/testing';
+import { EnrichHeroService } from '@home/services/enrich-components';
 import { NavigateHeroListComponent } from './navigate-hero-list.component';
 
 describe('NavigateHeroListComponent', () => {
   let component: NavigateHeroListComponent;
-  let fixture: ComponentFixture<NavigateHeroListComponent>;
-
+  let enrichHeroService: EnrichHeroService;
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NavigateHeroListComponent ]
+      declarations: [NavigateHeroListComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
-
   beforeEach(() => {
-    fixture = TestBed.createComponent(NavigateHeroListComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+    component = new NavigateHeroListComponent(enrichHeroService);
   });
-
   it('should create', () => {
     expect(component).toBeTruthy();
   });

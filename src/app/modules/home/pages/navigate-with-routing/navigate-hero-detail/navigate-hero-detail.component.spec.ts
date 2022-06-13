@@ -1,24 +1,19 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { TestBed } from '@angular/core/testing';
+import { ActivatedRoute } from '@angular/router';
 import { NavigateHeroDetailComponent } from './navigate-hero-detail.component';
 
 describe('NavigateHeroDetailComponent', () => {
   let component: NavigateHeroDetailComponent;
-  let fixture: ComponentFixture<NavigateHeroDetailComponent>;
-
+  let activatedRoute: ActivatedRoute;
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NavigateHeroDetailComponent ]
+      declarations: [NavigateHeroDetailComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
-
   beforeEach(() => {
-    fixture = TestBed.createComponent(NavigateHeroDetailComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+    component = new NavigateHeroDetailComponent(activatedRoute);
   });
-
   it('should create', () => {
     expect(component).toBeTruthy();
   });
