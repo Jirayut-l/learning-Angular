@@ -1,11 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { HeroService } from '@home/services/hero';
+import { Hero } from '@shared/models/Hero';
 
 @Component({
   selector: 'app-input-output',
   templateUrl: './input-output.component.html',
   styleUrls: ['./input-output.component.scss']
 })
-export class InputOutputComponent {
+export class InputOutputComponent implements OnInit {
+  heroes: Hero[] = [];
   hero: string = 'Spectrum';
   currentItem: string = 'Television Input';
   items: string[] = ['item1', 'item2', 'item3', 'item4'];
@@ -15,6 +18,14 @@ export class InputOutputComponent {
   currentItem2: string = 'Television Input2';
   wishlist: string[] = ['Drone', 'Computer'];
   fontSizeOneWayPx: number = 20;
+  name = 'Spectrum';
+
+  constructor(private heroService: HeroService) {
+  }
+
+  ngOnInit(): void {
+    this.heroes = this.heroService.getHeroes();
+  }
 
   public onLike(): void {
     window.alert(`I like ${this.hero}`);
@@ -50,5 +61,13 @@ export class InputOutputComponent {
 
   public decrease(): void {
     this.fontSizeOneWayPx -= 1;
+  }
+
+  public handlerConditionAction(canAction: boolean): boolean {
+    return canAction;
+  }
+
+  public testFunction(param: string): string {
+    return param;
   }
 }

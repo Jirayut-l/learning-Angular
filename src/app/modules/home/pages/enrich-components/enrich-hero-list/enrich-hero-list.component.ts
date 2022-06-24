@@ -14,6 +14,7 @@ export class EnrichHeroListComponent implements OnInit, OnDestroy {
   hero2: Observable<Hero[]> = new Observable<Hero[]>();
   destroy$ = new Subject();
 
+  // constructor
   constructor(private enrichHeroService: EnrichHeroService) {
   }
 

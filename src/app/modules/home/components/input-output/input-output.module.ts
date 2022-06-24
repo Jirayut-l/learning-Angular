@@ -7,6 +7,7 @@ import { InTheMetadataComponent } from "@home/pages/input-output/in-the-metadata
 import { ItemDetailComponent } from "@home/pages/input-output/item-detail";
 import { ItemInputOutputComponent } from "@home/pages/input-output/item-input-output";
 import { ItemOutputComponent } from "@home/pages/input-output/item-output";
+import { ShareCallbackMethodComponent } from '@home/pages/input-output/share-callback-method';
 import { SizerComponent } from "@home/pages/input-output/sizer";
 
 @NgModule({
@@ -16,7 +17,9 @@ import { SizerComponent } from "@home/pages/input-output/sizer";
     ItemDetailComponent,
     InTheMetadataComponent,
     ItemInputOutputComponent,
-    HeroInputOutputComponent],
+    HeroInputOutputComponent,
+    ShareCallbackMethodComponent
+  ],
   exports: [
     AliasingComponent,
     SizerComponent,
@@ -24,7 +27,8 @@ import { SizerComponent } from "@home/pages/input-output/sizer";
     ItemDetailComponent,
     InTheMetadataComponent,
     ItemInputOutputComponent,
-    HeroInputOutputComponent
+    HeroInputOutputComponent,
+    ShareCallbackMethodComponent
   ],
   imports: [
     CommonModule,
