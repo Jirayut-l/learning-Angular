@@ -17,7 +17,7 @@ import { AppComponent } from './app.component';
     AppRoutingModule,
     CoreModule,
     HttpClientModule,
-    HttpClientInMemoryWebApiModule.forRoot(EnrichHeroDataService)
+    HttpClientInMemoryWebApiModule.forRoot(EnrichHeroDataService),
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptorService, multi: true }

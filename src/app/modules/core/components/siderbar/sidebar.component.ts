@@ -31,6 +31,12 @@ export const ROUTES: RouteInfo[] = [
     title: 'Navigate With Routing',
     icon: 'bi bi-input-cursor',
     class: ''
+  },
+  {
+    path: '/orchestrating-validation-form',
+    title: 'Orchestrating Validation in Forms',
+    icon: 'bi bi-input-cursor',
+    class: ''
   }
 ];
 

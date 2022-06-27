@@ -2,6 +2,7 @@ import { Routes } from "@angular/router";
 import { EnrichComponentsComponent } from '@home/components/enrich-components';
 import { InputOutputComponent } from "@home/components/input-output";
 import { NavigateWithRoutingComponent } from '@home/components/navigate-with-routing';
+import { OrchestratingValidationFormComponent } from '@home/components/orchestrating-validation-form';
 import { PipesDirectivesComponent } from "@home/components/pipes-directives"
 import { StructureInjectionComponent } from '@home/components/structure-injection';
 import { HomeLayoutComponent } from "@home/layouts/home-layout";
@@ -35,7 +36,11 @@ export const HomeLayoutRouting: Routes = [
             component: NavigateWithRoutingComponent,
             loadChildren: () => import("./components/navigate-with-routing/navigate-with-routing.module")
               .then(p => p.NavigateWithRoutingModule)
-          }
+          },
+          {
+            path: 'orchestrating-validation-form',
+            component: OrchestratingValidationFormComponent
+          },
         ]
       }
     ]
