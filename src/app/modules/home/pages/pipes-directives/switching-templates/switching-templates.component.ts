@@ -25,8 +25,8 @@ export class SwitchingTemplatesComponent {
     { id: 7, name: 'Mr Bu Moversesd', team: 'villains' },
   ];
 
-  public trackByHeroes(index: number, { id }: Hero): number {
-    return id as number;
+  public trackByHeroes(index: number, hero: Hero): number {
+    return hero.id;
   }
 
   public getNewHeroes(): void {

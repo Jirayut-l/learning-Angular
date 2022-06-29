@@ -1,0 +1,52 @@
+<h3>Hero details</h3>
+<form [formGroup]="heroDetails">
+  <div>
+    <input type="text" placeholder="Name" formControlName="name">
+    <span class="help-block"
+          *ngIf="heroDetails.controls['name'].hasError('reservedName')">Hero name is already taken</span>
+  </div>
+  <div>
+    <input type="text" placeholder="Real name" formControlName="realName">
+  </div>
+  <h4>Biometric data</h4>
+  <form formGroupName="biometricData">
+    <div>
+      <label>Age:</label>
+      <input type="number" formControlName="age">
+    </div>
+    <div>
+      <label>Eyes:</label>
+      <input type="color" formControlName="eyes">
+    </div>
+    <div>
+      <label>Hair:</label>
+      <input type="color" formControlName="hair">
+    </div>
+  </form>
+  <button (click)="addHero()">Add hero</button>
+  <button (click)="addBio()">Add biometric</button>
+  <button [disabled]="!this.heroDetails.controls['powers'].valid" (click)="addPower()">Add power</button>
+  <div formArrayName="powers" *ngFor="let power of powers.controls; let i=index">
+    <label>
+      Power:
+      <input type="text" [formControlName]="i">
+    </label>
+  </div>
+
+  <ng-container formArrayName="lessons">
+    <ng-container *ngFor="let lessonForm of lessons.controls; let i = index">
+      <div [formGroupName]="i">
+        <input formControlName="title" placeholder="Lesson title">
+        <select formControlName="level">
+          <option value="beginner">Beginner</option>
+          <option value="intermediate">Intermediate</option>
+          <option value="advanced">Advanced</option>
+        </select>
+      </div>
+    </ng-container>
+  </ng-container>
+
+  <button (click)="addLesson()">addLesson</button>
+
+
+</form>
