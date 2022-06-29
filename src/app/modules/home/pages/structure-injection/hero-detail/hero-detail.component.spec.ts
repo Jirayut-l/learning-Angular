@@ -1,19 +1,15 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { HeroService } from '@home/services/hero';
+import { HeroDetailService } from '@home/services/hero-detail';
 import { HeroDetailComponent } from './hero-detail.component';
 
 describe('HeroDetailComponent', () => {
   let component: HeroDetailComponent;
-  let fixture: ComponentFixture<HeroDetailComponent>;
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [HeroDetailComponent]
-    })
-      .compileComponents();
-  });
+  let heroDetailService: HeroDetailService;
+  let heroService: HeroService;
   beforeEach(() => {
-    fixture = TestBed.createComponent(HeroDetailComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+    heroService = new HeroService();
+    heroDetailService = new HeroDetailService(heroService);
+    component = new HeroDetailComponent(heroDetailService);
   });
   it('should create', () => {
     expect(component).toBeTruthy();
