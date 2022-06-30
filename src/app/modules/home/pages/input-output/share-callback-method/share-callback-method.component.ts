@@ -6,10 +6,10 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./share-callback-method.component.scss']
 })
 export class ShareCallbackMethodComponent {
+  conditionAction: boolean = true;
   @Input() public handlerConditionAction: (canAction: boolean) => boolean = () => {
     return false
   };
-  conditionAction: boolean = true;
   @Input() public testFunction: (param: string) => string = (param: string) => {
     return param
   };

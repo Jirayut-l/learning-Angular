@@ -6,7 +6,7 @@ export const heroSquadFactory = (isFavorite: boolean) => {
     if (isFavorite) {
       return new HeroFavoriteService()
     } else {
-     return  new HeroService()
+      return new HeroService()
     }
   };
 };

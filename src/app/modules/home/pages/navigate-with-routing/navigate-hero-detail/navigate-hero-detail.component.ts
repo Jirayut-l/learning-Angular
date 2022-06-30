@@ -9,8 +9,8 @@ import { Hero } from '@shared/models/Hero';
 })
 export class NavigateHeroDetailComponent implements OnInit {
   hero: Hero = {} as Hero;
-  // destroy$ = new Subject();
 
+  // destroy$ = new Subject();
   constructor(private route: ActivatedRoute) {
   }
 

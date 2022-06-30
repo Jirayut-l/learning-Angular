@@ -7,12 +7,12 @@ import { Observable, of } from 'rxjs';
   providedIn: 'root'
 })
 export class ConfirmGuard implements CanDeactivate<NavigateHeroDetailComponent> {
-  public canDeactivate(): Observable<boolean> {
-    return ConfirmGuard.showConfirm();
-  }
-
   private static showConfirm(): Observable<boolean> {
     const confirmation = window.confirm('Are you sure?');
     return of(confirmation);
+  }
+
+  public canDeactivate(): Observable<boolean> {
+    return ConfirmGuard.showConfirm();
   }
 }

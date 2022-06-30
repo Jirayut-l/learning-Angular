@@ -5,7 +5,5 @@ import { Component } from '@angular/core';
   templateUrl: './orchestrating-validation-form.component.html',
   styleUrls: ['./orchestrating-validation-form.component.scss']
 })
-export class OrchestratingValidationFormComponent  {
-
-
+export class OrchestratingValidationFormComponent {
 }

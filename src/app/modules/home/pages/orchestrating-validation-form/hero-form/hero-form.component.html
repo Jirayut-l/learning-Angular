@@ -1,40 +1,40 @@
 <h3>Hero details</h3>
 <form [formGroup]="heroDetails">
   <div>
-    <input type="text" placeholder="Name" formControlName="name">
-    <span class="help-block"
-          *ngIf="heroDetails.controls['name'].hasError('reservedName')">Hero name is already taken</span>
+    <input formControlName="name" placeholder="Name" type="text">
+    <span *ngIf="heroDetails.controls['name'].hasError('reservedName')"
+          class="help-block">Hero name is already taken</span>
   </div>
   <div>
-    <input type="text" placeholder="Real name" formControlName="realName">
+    <input formControlName="realName" placeholder="Real name" type="text">
   </div>
   <h4>Biometric data</h4>
   <form formGroupName="biometricData">
     <div>
       <label>Age:</label>
-      <input type="number" formControlName="age">
+      <input formControlName="age" type="number">
     </div>
     <div>
       <label>Eyes:</label>
-      <input type="color" formControlName="eyes">
+      <input formControlName="eyes" type="color">
     </div>
     <div>
       <label>Hair:</label>
-      <input type="color" formControlName="hair">
+      <input formControlName="hair" type="color">
     </div>
   </form>
   <button (click)="addHero()">Add hero</button>
   <button (click)="addBio()">Add biometric</button>
-  <button [disabled]="!this.heroDetails.controls['powers'].valid" (click)="addPower()">Add power</button>
-  <div formArrayName="powers" *ngFor="let power of powers.controls; let i=index">
+  <button (click)="addPower()" [disabled]="!this.heroDetails.controls['powers'].valid">Add power</button>
+  <div *ngFor="let power of powers.controls; let i=index" formArrayName="powers">
     <label>
       Power:
-      <input type="text" [formControlName]="i">
+      <input [formControlName]="i" type="text">
     </label>
   </div>
 
   <ng-container formArrayName="lessons">
-    <ng-container *ngFor="let lessonForm of lessons.controls; let i = index">
+    <ng-container *ngFor="let lessonForm of lessons.controls; index as i ">
       <div [formGroupName]="i">
         <input formControlName="title" placeholder="Lesson title">
         <select formControlName="level">
@@ -45,8 +45,5 @@
       </div>
     </ng-container>
   </ng-container>
-
-  <button (click)="addLesson()">addLesson</button>
-
-
+  <button (click)="addLesson()" [disabled]="!this.heroDetails.controls['lessons'].valid">addLesson</button>
 </form>

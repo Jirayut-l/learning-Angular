@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Hero } from '@shared/models/Hero';
 import { HeroService } from '@home/services/hero';
 import { heroSquadFactory } from '@home/services/hero-squad';
+import { Hero } from '@shared/models/Hero';
 
 @Component({
   selector: 'app-favorite-heroes',

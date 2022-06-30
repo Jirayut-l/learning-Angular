@@ -7,7 +7,6 @@ import { AbstractControl, FormControl, FormGroup, Validators } from '@angular/fo
   styleUrls: ['./reactive-login-form.component.scss']
 })
 export class ReactiveLoginFormComponent implements OnInit {
-
   loginForm = new FormGroup({
     username: new FormControl('', Validators.required),
     password: new FormControl('', [
@@ -15,7 +14,6 @@ export class ReactiveLoginFormComponent implements OnInit {
       Validators.minLength(6)
     ])
   });
-
   showPasswordHint: boolean = false;
 
   get username(): AbstractControl {
@@ -28,7 +26,6 @@ export class ReactiveLoginFormComponent implements OnInit {
 
   // constructor(private builder: FormBuilder) {
   // }
-
   ngOnInit(): void {
     this.password.valueChanges.subscribe((value: string) => {
       this.showPasswordHint = value.length < 6;

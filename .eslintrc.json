@@ -80,7 +80,13 @@
           "error",
           {
             "before": false,
-            "after": true
+            "after": true,
+            "overrides": {
+              "arrow": {
+                "before": true,
+                "after": true
+              }
+            }
           }
         ],
         "@typescript-eslint/no-non-null-asserted-nullish-coalescing": "warn",

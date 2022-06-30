@@ -5,6 +5,5 @@ import { Component } from '@angular/core';
   templateUrl: './navigate-with-routing.component.html',
   styleUrls: ['./navigate-with-routing.component.scss']
 })
-export class NavigateWithRoutingComponent   {
-
+export class NavigateWithRoutingComponent {
 }

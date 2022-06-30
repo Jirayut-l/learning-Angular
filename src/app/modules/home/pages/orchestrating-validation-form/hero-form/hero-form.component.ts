@@ -8,13 +8,6 @@ import { reservedNameValidator } from '@shared/directives/reserved-name';
   styleUrls: ['./hero-form.component.scss']
 })
 export class HeroFormComponent {
-  get powers(): FormArray {
-    return this.heroDetails.controls['powers'] as FormArray;
-  }
-
-  get lessons(): FormArray {
-    return this.heroDetails.controls["lessons"] as FormArray;
-  }
   heroDetails = new FormGroup({
     name: new FormControl('', reservedNameValidator()),
     realName: new FormControl(''),
@@ -27,12 +20,20 @@ export class HeroFormComponent {
     lessons: new FormArray([])
   });
 
-  public addPower(): void {
-    this.powers.push(new FormControl('',Validators.required));
+  get powers(): FormArray {
+    return this.heroDetails.controls['powers'] as FormArray;
   }
 
- public addLesson(): void {
-    const lessonForm = new FormGroup ({
+  get lessons(): FormArray {
+    return this.heroDetails.controls["lessons"] as FormArray;
+  }
+
+  public addPower(): void {
+    this.powers.push(new FormControl('', Validators.required));
+  }
+
+  public addLesson(): void {
+    const lessonForm = new FormGroup({
       title: new FormControl('', Validators.required),
       level: new FormControl('beginner', Validators.required)
     });

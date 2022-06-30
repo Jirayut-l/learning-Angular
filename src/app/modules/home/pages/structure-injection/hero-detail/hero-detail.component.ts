@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Hero } from '@shared/models/Hero';
 import { HeroDetailService } from '@home/services/hero-detail';
+import { Hero } from '@shared/models/Hero';
 
 @Component({
   selector: 'app-hero-detail',

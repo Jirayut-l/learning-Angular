@@ -1,4 +1,4 @@
-import { ValidatorFn, AbstractControl } from '@angular/forms';
+import { AbstractControl, ValidatorFn } from '@angular/forms';
 
 const heroes = [
   { id: 1, name: 'Boothstomper' },
@@ -9,8 +9,8 @@ const heroes = [
 ];
 
 export function reservedNameValidator(): ValidatorFn {
-  return (control: AbstractControl): {[key: string]: boolean} | null => {
+  return (control: AbstractControl): { [key: string]: boolean } | null => {
     const reserved = heroes.find(hero => hero.name === control.value);
-    return reserved ? {'reservedName': true} : null;
+    return reserved ? { 'reservedName': true } : null;
   };
 }

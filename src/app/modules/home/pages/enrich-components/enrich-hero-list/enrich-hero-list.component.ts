@@ -40,19 +40,19 @@ export class EnrichHeroListComponent implements OnInit, OnDestroy {
     this.enrichHeroService.editHero(hero.id, existingHero)
       .pipe(takeUntil(this.destroy$))
       .subscribe(() => {
-      const hero = this.heroes.find(val => val.id === existingHero.id);
-      if (hero) {
-        hero.name = 'Pricezog';
-      }
-    });
+        const hero = this.heroes.find(val => val.id === existingHero.id);
+        if (hero) {
+          hero.name = 'Pricezog';
+        }
+      });
   }
 
   public remove(hero: Hero): void {
     this.enrichHeroService.deleteHero(hero.id)
       .pipe(takeUntil(this.destroy$))
       .subscribe(() => {
-      this.heroes = this.heroes.filter(selected => selected !== hero);
-    });
+        this.heroes = this.heroes.filter(selected => selected !== hero);
+      });
   }
 
   //private methods
