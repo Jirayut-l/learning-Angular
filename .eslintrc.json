@@ -90,6 +90,7 @@
           }
         ],
         "@typescript-eslint/no-non-null-asserted-nullish-coalescing": "warn",
+        "no-import-assign": "error",
         //
 
         //Extension Rules
@@ -136,6 +137,12 @@
         "@typescript-eslint/require-await": "error",
         "@typescript-eslint/space-infix-ops": [
           "error"
+        ],
+        "max-len": [
+          "error",
+          {
+            "code": 120
+          }
         ]
         //
       }

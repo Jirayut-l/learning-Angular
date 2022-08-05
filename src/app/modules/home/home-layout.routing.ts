@@ -1,4 +1,5 @@
 import { Routes } from "@angular/router";
+import { AnimationsComponent } from '@home/components/animations';
 import { EnrichComponentsComponent } from '@home/components/enrich-components';
 import { InputOutputComponent } from "@home/components/input-output";
 import { NavigateWithRoutingComponent } from '@home/components/navigate-with-routing';
@@ -41,6 +42,12 @@ export const HomeLayoutRouting: Routes = [
             path: 'orchestrating-validation-form',
             component: OrchestratingValidationFormComponent
           },
+          {
+            path: 'animations',
+            component: AnimationsComponent,
+            loadChildren: () => import("./components/animations/animations.module")
+              .then(p => p.AnimationsModule)
+          }
         ]
       }
     ]

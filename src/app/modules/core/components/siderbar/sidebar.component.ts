@@ -37,6 +37,12 @@ export const ROUTES: RouteInfo[] = [
     title: 'Orchestrating Validation in Forms',
     icon: 'bi bi-input-cursor',
     class: ''
+  },
+  {
+    path: '/animations',
+    title: 'Angular animations',
+    icon: 'bi bi-input-cursor',
+    class: ''
   }
 ];
 

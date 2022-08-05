@@ -67,7 +67,7 @@ export class InputOutputComponent implements OnInit {
     return canAction;
   }
 
-  public testFunction(param: string): string {
+  public testFunction = (param: string): string => {
     return param;
   }
 }
