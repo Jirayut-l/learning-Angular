@@ -22,16 +22,6 @@ import {
     StatusSliderComponent,
     ToggleAnimationPageComponent
   ],
-  exports: [
-    HomeAnimationComponent,
-    AboutAnimationComponent,
-    OpenCloseComponent,
-    OpenClosePageComponent,
-    OpenCloseChildComponent,
-    OpenClosePageComponent,
-    StatusSliderComponent,
-    ToggleAnimationPageComponent
-  ],
   imports: [
     CommonModule,
     AnimationsRoutingModule,
