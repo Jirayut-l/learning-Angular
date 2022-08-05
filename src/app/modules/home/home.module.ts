@@ -40,7 +40,7 @@ import { ShareModule } from '@shared/share.module';
     NavigateWithRoutingModule,
     OrchestratingValidationFormModule,
     AnimationsModule,
-    ShareModule,
+    ShareModule
   ],
 })
 export class HomeModule {
