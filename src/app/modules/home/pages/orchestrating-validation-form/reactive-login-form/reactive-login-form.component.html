@@ -1,18 +1,25 @@
 <h3>Reactive forms</h3>
 <form (ngSubmit)="login()" [formGroup]="loginForm">
-  <div>
-    <input formControlName="username" name="username" placeholder="Username" required type="text">
-    <span *ngIf="username.touched && username.invalid" class="help-block">The username is not valid</span>
-  </div>
-  <div>
-    <input formControlName="password" name="password" placeholder="Password" required type="password">
-    <span *ngIf="password.touched && password.errors?.['required']" class="help-block">The password is required</span>
-    <span *ngIf="password.touched && password.errors?.['minlength']" class="help-block">The password is too short</span>
-    <span *ngIf="showPasswordHint">Password should be minimum six characters long</span>
-    <span *ngIf="password.touched && password.errors?.['invalid']"
-          class="help-block">Incorrect password Try again</span>
-  </div>
-  <button [disabled]="!loginForm.valid" type="submit">Login</button>
-  <div>You are trying to login as <b>{{this.username.value}}</b></div>
+    <div>
+        <input formControlName="username" name="username" placeholder="Username" required type="text">
+        <span *ngIf="username.touched && username.invalid" class="help-block">The username is not valid</span>
+    </div>
+    <div>
+        <input formControlName="password" name="password" placeholder="Password" required type="password">
+        <span *ngIf="password.touched && password.errors?.['required']"
+              class="help-block">The password is required</span>
+        <span *ngIf="password.touched && password.errors?.['minlength']"
+              class="help-block">The password is too short</span>
+        <span *ngIf="showPasswordHint">Password should be minimum six characters long</span>
+        <span *ngIf="password.touched && password.errors?.['invalid']"
+              class="help-block">Incorrect password Try again</span>
+        <div>
+        <app-select-dropdown [listData]="prefixList" [formGroup]="prefixCode"></app-select-dropdown>
+            <span *ngIf="prefixCode.touched && prefixCode.errors?.['required']"
+                  class="help-block">Please Select Prefix</span>
+        </div>
+    </div>
+    <button [disabled]="!loginForm.valid" type="submit">Login</button>
+    <div>You are trying to login as <b>{{this.username.value}}</b></div>
 </form>
 

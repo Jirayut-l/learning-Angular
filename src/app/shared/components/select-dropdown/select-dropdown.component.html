@@ -1,0 +1,6 @@
+<select [formControl]="control" aria-label="Default select">
+    <option value="">Selection</option>
+    <option *ngFor="let item of listData; trackBy:trackById" [value]="item.id">
+        {{item.label}}
+    </option>
+</select>
