@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { EnrichHeroService } from '../../../services/enrich-components';
+import { EnrichHeroService } from '@home/services/enrich-components';
 import { EnrichHeroListComponent } from './enrich-hero-list.component';
 
 describe('EnrichHeroListComponent', () => {
