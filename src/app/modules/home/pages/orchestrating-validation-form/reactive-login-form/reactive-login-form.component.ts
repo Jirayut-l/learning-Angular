@@ -52,10 +52,6 @@ export class ReactiveLoginFormComponent implements OnInit {
         }
     }
 
-    public myFunction(): void {
-        console.log(this.loginForm.controls['prefixCode']);
-    }
-
     // private buildForm(): void {
     //   this.loginForm = this.builder.group({
     //     username: ['', Validators.required],

@@ -16,7 +16,6 @@ export class SelectDropdownComponent implements OnInit {
 
     ngOnInit(): void {
         this.control = this.controlContainer.control as FormControl;
-        console.log(this.control);
     }
 
     public trackById(index: number, item: DataDropdownList): number {
