@@ -16,6 +16,7 @@ export class NavigateHeroDetailComponent implements OnInit {
 
   ngOnInit(): void {
     this.hero = this.route.snapshot.data['hero'];
+    console.log(this.hero);
   }
 
   // ngOnDestroy(): void {

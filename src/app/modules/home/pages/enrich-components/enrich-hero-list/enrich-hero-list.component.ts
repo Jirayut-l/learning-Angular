@@ -21,6 +21,7 @@ export class EnrichHeroListComponent implements OnInit, OnDestroy {
   //lifecycle hook
   ngOnInit(): void {
     this.getHeroes();
+    console.log(this.heroes);
   }
 
   ngOnDestroy(): void {
