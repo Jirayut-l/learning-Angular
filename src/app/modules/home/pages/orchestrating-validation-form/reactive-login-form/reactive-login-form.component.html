@@ -23,3 +23,14 @@
     <div>You are trying to login as <b>{{this.username.value}}</b></div>
 </form>
 
+<div class="card mt-4 mb-3">
+    <div class="card-header">
+        Reactive Forms By Angular
+    </div>
+    <div class="card-body">
+        <button type="button" class="btn btn-primary btn-lg" (click)="toggleEditor('name')">Name Editor</button>
+        <button type="button" class="btn btn-primary btn-lg" (click)="toggleEditor('profile')">Profile Editor</button>
+        <app-name-editor-form *ngIf="showNameEditor"></app-name-editor-form>
+        <app-profile-editor-form *ngIf="showProfileEditor"></app-profile-editor-form>
+    </div>
+</div>

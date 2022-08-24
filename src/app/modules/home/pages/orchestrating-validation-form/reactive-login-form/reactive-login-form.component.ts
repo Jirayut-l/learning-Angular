@@ -2,12 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormControl, FormGroup, Validators } from '@angular/forms';
 import { DataDropdownList } from '@shared/models/DropdownList/data-dropdown-list';
 
+export type EditorType = 'name' | 'profile';
+
 @Component({
     selector: 'app-reactive-login-form',
     templateUrl: './reactive-login-form.component.html',
     styleUrls: ['./reactive-login-form.component.scss']
 })
 export class ReactiveLoginFormComponent implements OnInit {
+    editor: EditorType = 'name';
     loginForm = new FormGroup({
         username: new FormControl('', Validators.required),
         password: new FormControl('', [
@@ -36,6 +39,16 @@ export class ReactiveLoginFormComponent implements OnInit {
         return this.loginForm.controls['prefixCode'] as FormGroup;
     }
 
+
+
+    get showNameEditor(): boolean {
+        return this.editor === 'name';
+    }
+
+    get showProfileEditor(): boolean {
+        return this.editor === 'profile';
+    }
+
     // constructor(private builder: FormBuilder) {
     // }
     ngOnInit(): void {
@@ -50,6 +63,10 @@ export class ReactiveLoginFormComponent implements OnInit {
         if (this.password.value !== '1234567') {
             this.loginForm.controls['password'].setErrors({ 'invalid': true });
         }
+    }
+
+    public toggleEditor(type: EditorType): void {
+        this.editor = type;
     }
 
     // private buildForm(): void {

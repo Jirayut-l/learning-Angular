@@ -19,7 +19,9 @@ import { ShareModule } from '@shared/share.module';
     exports: [
         LoginFormComponent,
         ReactiveLoginFormComponent,
-        HeroFormComponent
+        HeroFormComponent,
+        NameEditorFormComponent,
+        ProfileEditorFormComponent
     ],
     imports: [
         CommonModule,
