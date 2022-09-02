@@ -7,49 +7,54 @@ import { OrchestratingValidationFormComponent } from '@home/components/orchestra
 import { PipesDirectivesComponent } from "@home/components/pipes-directives"
 import { StructureInjectionComponent } from '@home/components/structure-injection';
 import { HomeLayoutComponent } from "@home/layouts/home-layout";
+import { EnrichHeroResolverAllService } from "@home/services/enrich-components";
+
 
 export const HomeLayoutRouting: Routes = [
-  {
-    path: '',
-    component: HomeLayoutComponent,
-    children: [
-      {
+    {
         path: '',
+        component: HomeLayoutComponent,
         children: [
-          {
-            path: 'inputoutput',
-            component: InputOutputComponent
-          },
-          {
-            path: 'pipesdirectives',
-            component: PipesDirectivesComponent
-          },
-          {
-            path: 'structure-injection',
-            component: StructureInjectionComponent
-          },
-          {
-            path: 'enrich-components',
-            component: EnrichComponentsComponent
-          },
-          {
-            path: 'navigate-with-routing',
-            component: NavigateWithRoutingComponent,
-            loadChildren: () => import("./components/navigate-with-routing/navigate-with-routing.module")
-              .then(p => p.NavigateWithRoutingModule)
-          },
-          {
-            path: 'orchestrating-validation-form',
-            component: OrchestratingValidationFormComponent
-          },
-          {
-            path: 'animations',
-            component: AnimationsComponent,
-            loadChildren: () => import("./components/animations/animations.module")
-              .then(p => p.AnimationsModule)
-          }
+            {
+                path: '',
+                children: [
+                    {
+                        path: 'inputoutput',
+                        component: InputOutputComponent
+                    },
+                    {
+                        path: 'pipesdirectives',
+                        component: PipesDirectivesComponent
+                    },
+                    {
+                        path: 'structure-injection',
+                        component: StructureInjectionComponent
+                    },
+                    {
+                        path: 'enrich-components',
+                        component: EnrichComponentsComponent,
+                        resolve: {
+                            hero: EnrichHeroResolverAllService
+                        }
+                    },
+                    {
+                        path: 'navigate-with-routing',
+                        component: NavigateWithRoutingComponent,
+                        loadChildren: () => import("./components/navigate-with-routing/navigate-with-routing.module")
+                            .then(p => p.NavigateWithRoutingModule)
+                    },
+                    {
+                        path: 'orchestrating-validation-form',
+                        component: OrchestratingValidationFormComponent
+                    },
+                    {
+                        path: 'animations',
+                        component: AnimationsComponent,
+                        loadChildren: () => import("./components/animations/animations.module")
+                            .then(p => p.AnimationsModule)
+                    }
+                ]
+            }
         ]
-      }
-    ]
-  }
+    }
 ];
