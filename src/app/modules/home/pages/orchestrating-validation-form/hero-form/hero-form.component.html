@@ -27,23 +27,19 @@
     <button (click)="addBio()">Add biometric</button>
     <button (click)="addPower()" [disabled]="!this.heroDetails.controls['powers'].valid">Add power</button>
     <div *ngFor="let power of powers.controls; let i=index" formArrayName="powers">
-        <label>
-            Power:
-            <input [formControlName]="i" type="text">
-        </label>
+        <label class="form-label">Power:</label>
+        <input class="form-control" [formControlName]="i" type="text">
     </div>
 
-    <div formArrayName="lessons">
-        <ng-container *ngFor="let lessonForm of lessons.controls; index as i ">
-            <div [formGroupName]="i">
-                <input formControlName="title" placeholder="Lesson title">
-                <select formControlName="level">
-                    <option value="beginner">Beginner</option>
-                    <option value="intermediate">Intermediate</option>
-                    <option value="advanced">Advanced</option>
-                </select>
-            </div>
-        </ng-container>
+    <div *ngFor="let _ of lessons.controls; let i=index" formArrayName="lessons">
+        <div [formGroupName]="i">
+            <input formControlName="title" placeholder="Lesson title">
+            <select formControlName="level">
+                <option value="beginner">Beginner</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="advanced">Advanced</option>
+            </select>
+        </div>
     </div>
     <button (click)="addLesson()" [disabled]="!this.heroDetails.controls['lessons'].valid">addLesson</button>
 </form>

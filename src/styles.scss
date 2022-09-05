@@ -1,17 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
-.ng-touched:not(form) {
-  border: 3px solid lightblue;
-}
+//.ng-touched:not(form) {
+//  border: 3px solid lightblue;
+//}
+//
+//.ng-dirty.ng-valid:not(form) {
+//  border: 2px solid green;
+//}
+//
+//.ng-dirty.ng-invalid:not(form) {
+//  border: 2px solid red;
+//}
 
-.ng-dirty.ng-valid:not(form) {
-  border: 2px solid green;
-}
+//.ng-valid[required], .ng-valid.required:not(form) {
+//  border: 2px solid green; /* green */
+//}
 
-.ng-dirty.ng-invalid:not(form) {
+//.ng-invalid.ng-touched:not(form) {
+//  border: 2px solid red; /* red */
+//}
+
+input.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched,
+select.ng-invalid.ng-touched {
   border: 2px solid red;
 }
 
+input.ng-valid.ng-touched ,.ng-valid[required].ng-touched,
+textarea.ng-valid.ng-touched,.ng-valid[required].ng-touched,
+select.ng-valid.ng-touched ,.ng-valid[required].ng-touched{
+  border: 2px solid green;
+}
+
+
 .help-block {
-  margin: 5px;
-  color: crimson;
+  margin-top: .25rem;
+  font-size: .875em;
+  color: red;
 }

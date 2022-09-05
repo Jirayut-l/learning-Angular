@@ -1,6 +1,10 @@
-<select [formControl]="control" aria-label="Default select">
+<select class="form-select" [formControl]="control" aria-label="Default select">
     <option value="">Selection</option>
     <option *ngFor="let item of listData; trackBy:trackById" [value]="item.id">
         {{item.label}}
     </option>
 </select>
+<span *ngIf="control.touched && control.errors?.['required']" class="help-block">
+    Please Select Prefix
+</span>
+

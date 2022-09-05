@@ -17,7 +17,9 @@ export class ReactiveLoginFormComponent implements OnInit {
             Validators.required,
             Validators.minLength(6)
         ]),
-        prefixCode: new FormControl('',Validators.required)
+        prefixCode: new FormControl('', Validators.required),
+        valueX: new FormControl('',Validators.required),
+        status: new FormControl(false,Validators.requiredTrue)
     });
     showPasswordHint: boolean = false;
     prefixList: DataDropdownList[] = [
@@ -35,11 +37,13 @@ export class ReactiveLoginFormComponent implements OnInit {
         return this.loginForm.controls['password'];
     }
 
+    get status(): AbstractControl {
+        return this.loginForm.controls['status'];
+    }
+
     get prefixCode(): FormGroup {
         return this.loginForm.controls['prefixCode'] as FormGroup;
     }
-
-
 
     get showNameEditor(): boolean {
         return this.editor === 'name';
@@ -58,6 +62,9 @@ export class ReactiveLoginFormComponent implements OnInit {
     }
 
     public login(): void {
+        if (this.loginForm.invalid) {
+            return;
+        }
         console.log(`User: ${this.username.value}`);
         console.log(`Password: ${this.password.value}`);
         if (this.password.value !== '1234567') {
