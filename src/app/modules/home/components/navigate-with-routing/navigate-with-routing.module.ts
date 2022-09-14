@@ -6,14 +6,7 @@ import { NavigateHeroDetailComponent } from '@home/pages/navigate-with-routing/n
 import { NavigateHeroListComponent } from '@home/pages/navigate-with-routing/navigate-hero-list';
 
 @NgModule({
-  declarations: [
-    NavigateHeroListComponent,
-    NavigateHeroDetailComponent
-  ],
-  imports: [
-    CommonModule,
-    RouterModule.forChild(NavigateWithRoutingRouting),
-  ]
+  declarations: [NavigateHeroListComponent, NavigateHeroDetailComponent],
+  imports: [CommonModule, RouterModule.forChild(NavigateWithRoutingRouting)],
 })
-export class NavigateWithRoutingModule {
-}
+export class NavigateWithRoutingModule {}

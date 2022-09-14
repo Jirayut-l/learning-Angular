@@ -6,21 +6,8 @@ import { HeroListComponent } from '@home/pages/structure-injection/hero-list';
 import { ProductProvidersComponent } from '@home/pages/structure-injection/product-providers';
 
 @NgModule({
-  declarations: [
-    FavoriteHeroesComponent,
-    HeroDetailComponent,
-    HeroListComponent,
-    ProductProvidersComponent
-  ],
-  exports: [
-    FavoriteHeroesComponent,
-    HeroDetailComponent,
-    HeroListComponent,
-    ProductProvidersComponent
-  ],
-  imports: [
-    CommonModule
-  ]
+  declarations: [FavoriteHeroesComponent, HeroDetailComponent, HeroListComponent, ProductProvidersComponent],
+  exports: [FavoriteHeroesComponent, HeroDetailComponent, HeroListComponent, ProductProvidersComponent],
+  imports: [CommonModule],
 })
-export class StructureInjectionModule {
-}
+export class StructureInjectionModule {}

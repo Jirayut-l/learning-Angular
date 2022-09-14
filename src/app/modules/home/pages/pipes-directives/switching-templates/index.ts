@@ -1,1 +1,1 @@
-export * from "./switching-templates.component";
+export * from './switching-templates.component';

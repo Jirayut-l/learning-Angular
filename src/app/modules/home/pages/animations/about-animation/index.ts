@@ -1,1 +1,1 @@
-export * from "./about-animation.component";
+export * from './about-animation.component';

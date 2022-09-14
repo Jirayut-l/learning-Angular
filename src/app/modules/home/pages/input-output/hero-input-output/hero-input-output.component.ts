@@ -3,10 +3,10 @@ import { Component, EventEmitter, Input, OnChanges, Output, SimpleChanges } from
 @Component({
   selector: 'app-hero-input-output',
   templateUrl: './hero-input-output.component.html',
-  styleUrls: ['./hero-input-output.component.scss']
+  styleUrls: ['./hero-input-output.component.scss'],
 })
 export class HeroInputOutputComponent implements OnChanges {
-  @Input() public name: string = "";
+  @Input() public name: string = '';
   @Output() public liked = new EventEmitter();
 
   // @Output() nameChange = new EventEmitter<string>();

@@ -5,7 +5,7 @@ import { Hero } from '@shared/models/Hero';
 @Component({
   selector: 'app-input-output',
   templateUrl: './input-output.component.html',
-  styleUrls: ['./input-output.component.scss']
+  styleUrls: ['./input-output.component.scss'],
 })
 export class InputOutputComponent implements OnInit {
   heroes: Hero[] = [];
@@ -20,8 +20,7 @@ export class InputOutputComponent implements OnInit {
   fontSizeOneWayPx: number = 20;
   name = 'Spectrum';
 
-  constructor(private heroService: HeroService) {
-  }
+  constructor(private heroService: HeroService) {}
 
   ngOnInit(): void {
     this.heroes = this.heroService.getHeroes();
@@ -69,5 +68,5 @@ export class InputOutputComponent implements OnInit {
 
   public testFunction = (param: string): string => {
     return param;
-  }
+  };
 }

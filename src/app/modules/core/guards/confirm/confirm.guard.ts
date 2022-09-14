@@ -4,7 +4,7 @@ import { NavigateHeroDetailComponent } from '@home/pages/navigate-with-routing/n
 import { Observable, of } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ConfirmGuard implements CanDeactivate<NavigateHeroDetailComponent> {
   private static showConfirm(): Observable<boolean> {

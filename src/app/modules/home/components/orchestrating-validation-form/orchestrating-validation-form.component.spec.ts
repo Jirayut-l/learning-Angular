@@ -6,9 +6,8 @@ describe('OrchestratingValidationFormComponent', () => {
   let fixture: ComponentFixture<OrchestratingValidationFormComponent>;
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [OrchestratingValidationFormComponent]
-    })
-      .compileComponents();
+      declarations: [OrchestratingValidationFormComponent],
+    }).compileComponents();
   });
   beforeEach(() => {
     fixture = TestBed.createComponent(OrchestratingValidationFormComponent);

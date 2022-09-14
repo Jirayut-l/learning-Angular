@@ -3,7 +3,7 @@ import { Component, EventEmitter, Input, OnChanges, Output, SimpleChanges } from
 @Component({
   selector: 'app-sizer',
   templateUrl: './sizer.component.html',
-  styleUrls: ['./sizer.component.scss']
+  styleUrls: ['./sizer.component.scss'],
 })
 export class SizerComponent implements OnChanges {
   @Input() public priceValue: number = 0;

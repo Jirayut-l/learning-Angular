@@ -1,11 +1,13 @@
 <h3>Template driven forms</h3>
 <form (ngSubmit)="login()">
   <div>
-    <input [(ngModel)]="username" name="username" placeholder="Username" type="text">
+    <input [(ngModel)]="username" name="username" placeholder="Username" type="text" />
   </div>
   <div>
-    <input [(ngModel)]="password" name="password" placeholder="Password" type="password">
+    <input [(ngModel)]="password" name="password" placeholder="Password" type="password" />
   </div>
   <button type="submit">Login</button>
-  <div>You are trying to login as <b>{{username}}</b></div>
+  <div>
+    You are trying to login as <b>{{ username }}</b>
+  </div>
 </form>

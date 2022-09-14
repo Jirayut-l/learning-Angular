@@ -3,7 +3,7 @@ import { Hero } from '@shared/models/Hero';
 import { InMemoryDbService } from 'angular-in-memory-web-api';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class EnrichHeroDataService implements InMemoryDbService {
   public createDb(): { heroes: Hero[] } {
@@ -14,6 +14,6 @@ export class EnrichHeroDataService implements InMemoryDbService {
       { id: 4, name: 'Mr Bu Moverse', team: '' },
       { id: 5, name: 'Piranhaelli', team: '' },
     ];
-    return { heroes }
+    return { heroes };
   }
 }

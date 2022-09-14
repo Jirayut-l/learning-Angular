@@ -1,1 +1,1 @@
-export * from "./navigate-hero-detail.component";
+export * from './navigate-hero-detail.component';

@@ -6,16 +6,13 @@ import { slideInAnimation } from '@shared/animations';
   selector: 'app-animations',
   templateUrl: './animations.component.html',
   styleUrls: ['./animations.component.scss'],
-  animations: [
-    slideInAnimation
-  ]
+  animations: [slideInAnimation],
 })
 export class AnimationsComponent {
   @HostBinding('@.disabled')
   public animationsDisabled: boolean = false;
 
-  constructor(private contexts: ChildrenOutletContexts) {
-  }
+  constructor(private contexts: ChildrenOutletContexts) {}
 
   public getRouteAnimationData(): unknown {
     return this.contexts.getContext('primary')?.route?.snapshot?.data?.['animation'];

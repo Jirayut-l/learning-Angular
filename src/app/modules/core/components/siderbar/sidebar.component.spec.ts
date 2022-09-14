@@ -6,9 +6,8 @@ describe('SiderbarComponent', () => {
   let fixture: ComponentFixture<SidebarComponent>;
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [SidebarComponent]
-    })
-      .compileComponents();
+      declarations: [SidebarComponent],
+    }).compileComponents();
   });
   beforeEach(() => {
     fixture = TestBed.createComponent(SidebarComponent);

@@ -6,9 +6,8 @@ describe('ProductProvidersComponent', () => {
   let fixture: ComponentFixture<ProductProvidersComponent>;
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ProductProvidersComponent]
-    })
-      .compileComponents();
+      declarations: [ProductProvidersComponent],
+    }).compileComponents();
   });
   beforeEach(() => {
     fixture = TestBed.createComponent(ProductProvidersComponent);

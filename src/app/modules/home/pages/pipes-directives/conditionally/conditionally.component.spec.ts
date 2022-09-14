@@ -6,9 +6,8 @@ describe('ConditionallyComponent', () => {
   let fixture: ComponentFixture<ConditionallyComponent>;
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ConditionallyComponent]
-    })
-      .compileComponents();
+      declarations: [ConditionallyComponent],
+    }).compileComponents();
   });
   beforeEach(() => {
     fixture = TestBed.createComponent(ConditionallyComponent);

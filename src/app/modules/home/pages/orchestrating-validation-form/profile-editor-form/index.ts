@@ -1,1 +1,1 @@
-export * from "./profile-editor-form.component";
+export * from './profile-editor-form.component';

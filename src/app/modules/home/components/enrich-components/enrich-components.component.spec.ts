@@ -6,9 +6,8 @@ describe('EnrichComponentsComponent', () => {
   let fixture: ComponentFixture<EnrichComponentsComponent>;
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [EnrichComponentsComponent]
-    })
-      .compileComponents();
+      declarations: [EnrichComponentsComponent],
+    }).compileComponents();
   });
   beforeEach(() => {
     fixture = TestBed.createComponent(EnrichComponentsComponent);

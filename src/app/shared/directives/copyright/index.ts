@@ -1,1 +1,1 @@
-export * from "./copyright.directive";
+export * from './copyright.directive';

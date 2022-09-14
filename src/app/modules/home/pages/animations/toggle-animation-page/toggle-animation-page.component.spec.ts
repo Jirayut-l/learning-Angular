@@ -8,9 +8,8 @@ describe('ToggleAnimationPageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ToggleAnimationPageComponent ]
-    })
-    .compileComponents();
+      declarations: [ToggleAnimationPageComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

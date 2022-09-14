@@ -8,9 +8,8 @@ describe('OpenClosePageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ OpenClosePageComponent ]
-    })
-    .compileComponents();
+      declarations: [OpenClosePageComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

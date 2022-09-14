@@ -1,1 +1,1 @@
-export * from "./conditionally.component";
+export * from './conditionally.component';

@@ -7,9 +7,8 @@ describe('NavigateHeroDetailComponent', () => {
   let activatedRoute: ActivatedRoute;
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [NavigateHeroDetailComponent]
-    })
-      .compileComponents();
+      declarations: [NavigateHeroDetailComponent],
+    }).compileComponents();
   });
   beforeEach(() => {
     component = new NavigateHeroDetailComponent(activatedRoute);

@@ -1,1 +1,1 @@
-export * from "./hero-form.component";
+export * from './hero-form.component';

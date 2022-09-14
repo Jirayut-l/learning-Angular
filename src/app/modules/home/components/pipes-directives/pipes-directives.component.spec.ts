@@ -6,9 +6,8 @@ describe('PipesDirectivesComponent', () => {
   let fixture: ComponentFixture<PipesDirectivesComponent>;
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [PipesDirectivesComponent]
-    })
-      .compileComponents();
+      declarations: [PipesDirectivesComponent],
+    }).compileComponents();
   });
   beforeEach(() => {
     fixture = TestBed.createComponent(PipesDirectivesComponent);

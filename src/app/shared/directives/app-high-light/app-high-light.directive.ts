@@ -1,11 +1,11 @@
 import { Directive, HostBinding, HostListener, OnInit } from '@angular/core';
 
 @Directive({
-  selector: '[appAppHighLight]'
+  selector: '[appAppHighLight]',
 })
 export class AppHighLightDirective implements OnInit {
-  @HostBinding('style.border') border: string = "";
-  @HostBinding('style.color') color: string = "";
+  @HostBinding('style.border') border: string = '';
+  @HostBinding('style.color') color: string = '';
 
   @HostListener('mouseover')
   onMouseOver(): void {

@@ -6,9 +6,8 @@ describe('HeroInputOutputComponent', () => {
   let fixture: ComponentFixture<HeroInputOutputComponent>;
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [HeroInputOutputComponent]
-    })
-      .compileComponents();
+      declarations: [HeroInputOutputComponent],
+    }).compileComponents();
   });
   beforeEach(() => {
     fixture = TestBed.createComponent(HeroInputOutputComponent);

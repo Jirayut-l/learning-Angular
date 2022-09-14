@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Hero } from '@shared/models/Hero';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class HeroService {
   public getHeroes(): Hero[] {

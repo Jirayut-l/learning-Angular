@@ -1,1 +1,1 @@
-export * from "./open-close-page.component";
+export * from './open-close-page.component';

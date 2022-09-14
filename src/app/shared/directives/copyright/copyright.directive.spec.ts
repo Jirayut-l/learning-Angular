@@ -7,7 +7,7 @@ describe('CopyrightDirective', () => {
   let nativeElement: ElementRef;
   beforeEach(() => {
     nativeElement = {
-      nativeElement: jest.fn()
+      nativeElement: jest.fn(),
     };
     renderer = { setProperty: jest.fn(), addClass: jest.fn() } as unknown as Renderer2;
     component = new CopyrightDirective(nativeElement, renderer);

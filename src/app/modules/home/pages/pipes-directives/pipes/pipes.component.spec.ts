@@ -6,9 +6,8 @@ describe('PipesComponent', () => {
   let fixture: ComponentFixture<PipesComponent>;
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [PipesComponent]
-    })
-      .compileComponents();
+      declarations: [PipesComponent],
+    }).compileComponents();
   });
   beforeEach(() => {
     fixture = TestBed.createComponent(PipesComponent);

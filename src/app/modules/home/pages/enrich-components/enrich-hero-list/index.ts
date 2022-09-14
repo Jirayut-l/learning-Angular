@@ -1,1 +1,1 @@
-export * from "./enrich-hero-list.component";
+export * from './enrich-hero-list.component';

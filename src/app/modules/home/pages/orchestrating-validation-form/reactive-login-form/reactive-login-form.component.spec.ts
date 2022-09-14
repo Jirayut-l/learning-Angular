@@ -6,9 +6,8 @@ describe('ReactiveLoginFormComponent', () => {
   let fixture: ComponentFixture<ReactiveLoginFormComponent>;
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ReactiveLoginFormComponent]
-    })
-      .compileComponents();
+      declarations: [ReactiveLoginFormComponent],
+    }).compileComponents();
   });
   beforeEach(() => {
     fixture = TestBed.createComponent(ReactiveLoginFormComponent);

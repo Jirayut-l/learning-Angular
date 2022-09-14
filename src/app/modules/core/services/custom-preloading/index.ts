@@ -1,1 +1,1 @@
-export * from "./custom-preloading.service";
+export * from './custom-preloading.service';

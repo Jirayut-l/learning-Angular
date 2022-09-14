@@ -6,9 +6,8 @@ describe('HomeLayoutComponent', () => {
   let fixture: ComponentFixture<HomeLayoutComponent>;
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [HomeLayoutComponent]
-    })
-      .compileComponents();
+      declarations: [HomeLayoutComponent],
+    }).compileComponents();
   });
   beforeEach(() => {
     fixture = TestBed.createComponent(HomeLayoutComponent);

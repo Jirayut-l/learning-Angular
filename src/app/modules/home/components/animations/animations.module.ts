@@ -7,9 +7,7 @@ import { OpenCloseChildComponent } from '@home/pages/animations/open-close-child
 import { OpenClosePageComponent } from '@home/pages/animations/open-close-page';
 import { OpenCloseComponent } from '@home/pages/animations/open-close/open-close.component';
 import { StatusSliderComponent } from '@home/pages/animations/status-slider/status-slider.component';
-import {
-  ToggleAnimationPageComponent
-} from '@home/pages/animations/toggle-animation-page/toggle-animation-page.component';
+import { ToggleAnimationPageComponent } from '@home/pages/animations/toggle-animation-page/toggle-animation-page.component';
 
 @NgModule({
   declarations: [
@@ -20,12 +18,8 @@ import {
     OpenCloseChildComponent,
     OpenClosePageComponent,
     StatusSliderComponent,
-    ToggleAnimationPageComponent
+    ToggleAnimationPageComponent,
   ],
-  imports: [
-    CommonModule,
-    AnimationsRoutingModule,
-  ]
+  imports: [CommonModule, AnimationsRoutingModule],
 })
-export class AnimationsModule {
-}
+export class AnimationsModule {}

@@ -9,26 +9,20 @@ import { ReactiveLoginFormComponent } from '@home/pages/orchestrating-validation
 import { ShareModule } from '@shared/share.module';
 
 @NgModule({
-    declarations: [
-        HeroFormComponent,
-        LoginFormComponent,
-        ReactiveLoginFormComponent,
-        NameEditorFormComponent,
-        ProfileEditorFormComponent
-    ],
-    exports: [
-        LoginFormComponent,
-        ReactiveLoginFormComponent,
-        HeroFormComponent,
-        NameEditorFormComponent,
-        ProfileEditorFormComponent
-    ],
-    imports: [
-        CommonModule,
-        FormsModule,
-        ReactiveFormsModule,
-        ShareModule
-    ]
+  declarations: [
+    HeroFormComponent,
+    LoginFormComponent,
+    ReactiveLoginFormComponent,
+    NameEditorFormComponent,
+    ProfileEditorFormComponent,
+  ],
+  exports: [
+    LoginFormComponent,
+    ReactiveLoginFormComponent,
+    HeroFormComponent,
+    NameEditorFormComponent,
+    ProfileEditorFormComponent,
+  ],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule, ShareModule],
 })
-export class OrchestratingValidationFormModule {
-}
+export class OrchestratingValidationFormModule {}

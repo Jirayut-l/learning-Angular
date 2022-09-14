@@ -1,47 +1,46 @@
 <h3>Hero details</h3>
 <form [formGroup]="heroDetails">
+  <div>
+    <input formControlName="name" placeholder="Name" type="text" />
+    <span *ngIf="heroDetails.controls['name'].hasError('reservedName')" class="help-block"
+      >Hero name is already taken</span
+    >
+  </div>
+  <div>
+    <input formControlName="realName" placeholder="Real name" type="text" />
+  </div>
+  <h4>Biometric data</h4>
+  <form formGroupName="biometricData">
     <div>
-        <input formControlName="name" placeholder="Name" type="text">
-        <span *ngIf="heroDetails.controls['name'].hasError('reservedName')"
-              class="help-block">Hero name is already taken</span>
+      <label>Age:</label>
+      <input formControlName="age" type="number" />
     </div>
     <div>
-        <input formControlName="realName" placeholder="Real name" type="text">
+      <label>Eyes:</label>
+      <input formControlName="eyes" type="color" />
     </div>
-    <h4>Biometric data</h4>
-    <form formGroupName="biometricData">
-        <div>
-            <label>Age:</label>
-            <input formControlName="age" type="number">
-        </div>
-        <div>
-            <label>Eyes:</label>
-            <input formControlName="eyes" type="color">
-        </div>
-        <div>
-            <label>Hair:</label>
-            <input formControlName="hair" type="color">
-        </div>
-    </form>
-    <button (click)="addHero()">Add hero</button>
-    <button (click)="addBio()">Add biometric</button>
-    <button (click)="addPower()" [disabled]="!this.heroDetails.controls['powers'].valid">Add power</button>
-    <div *ngFor="let power of powers.controls; let i=index" formArrayName="powers">
-        <label class="form-label">Power:</label>
-        <input class="form-control" [formControlName]="i" type="text">
+    <div>
+      <label>Hair:</label>
+      <input formControlName="hair" type="color" />
     </div>
+  </form>
+  <button (click)="addHero()">Add hero</button>
+  <button (click)="addBio()">Add biometric</button>
+  <button (click)="addPower()" [disabled]="!this.heroDetails.controls['powers'].valid">Add power</button>
+  <div *ngFor="let power of powers.controls; let i = index" formArrayName="powers">
+    <label class="form-label">Power:</label>
+    <input class="form-control" [formControlName]="i" type="text" />
+  </div>
 
-    <div *ngFor="let _ of lessons.controls; let i=index" formArrayName="lessons">
-        <div [formGroupName]="i">
-            <input formControlName="title" placeholder="Lesson title">
-            <select formControlName="level">
-                <option value="beginner">Beginner</option>
-                <option value="intermediate">Intermediate</option>
-                <option value="advanced">Advanced</option>
-            </select>
-        </div>
+  <div *ngFor="let _ of lessons.controls; let i = index" formArrayName="lessons">
+    <div [formGroupName]="i">
+      <input formControlName="title" placeholder="Lesson title" />
+      <select formControlName="level">
+        <option value="beginner">Beginner</option>
+        <option value="intermediate">Intermediate</option>
+        <option value="advanced">Advanced</option>
+      </select>
     </div>
-    <button (click)="addLesson()" [disabled]="!this.heroDetails.controls['lessons'].valid">addLesson</button>
+  </div>
+  <button (click)="addLesson()" [disabled]="!this.heroDetails.controls['lessons'].valid">addLesson</button>
 </form>
-
-

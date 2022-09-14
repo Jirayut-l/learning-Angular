@@ -9,23 +9,22 @@ const routes: Routes = [
   {
     path: 'homeanimation',
     component: HomeAnimationComponent,
-    data: { animation: 'HomeAnimationPage' }
+    data: { animation: 'HomeAnimationPage' },
   },
   {
     path: 'aboutanimation',
     component: AboutAnimationComponent,
-    data: { animation: 'AboutAnimationPage' }
+    data: { animation: 'AboutAnimationPage' },
   },
   {
     path: 'open-close',
     component: OpenClosePageComponent,
-    data: { animation: 'OpenClosePage' }
-  }
+    data: { animation: 'OpenClosePage' },
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AnimationsRoutingModule {
-}
+export class AnimationsRoutingModule {}

@@ -1,1 +1,1 @@
-export * from "./reserved-name.directive";
+export * from './reserved-name.directive';

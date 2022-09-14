@@ -7,28 +7,28 @@ const routes: Routes = [
   {
     path: '',
     redirectTo: '/inputoutput',
-    pathMatch: 'full'
+    pathMatch: 'full',
   },
   {
     path: '',
-    loadChildren: () => import("./modules/home/home.module").then(p => p.HomeModule)
+    loadChildren: () => import('./modules/home/home.module').then(p => p.HomeModule),
   },
   {
     path: 'about',
-    loadChildren: () => import("./modules/about/about.module").then(p => p.AboutModule),
+    loadChildren: () => import('./modules/about/about.module').then(p => p.AboutModule),
     // canLoad: [AuthGuard], should choose 1 canLoad or data:Preload (preloadingStrategy)
-    data: { preload: true }
+    data: { preload: true },
   },
-  { path: '**', component: PageNotFoundComponent }
+  { path: '**', component: PageNotFoundComponent },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes,
-    {
+  imports: [
+    RouterModule.forRoot(routes, {
       useHash: false,
-      preloadingStrategy: CustomPreloadingService
-    })],
-  exports: [RouterModule]
+      preloadingStrategy: CustomPreloadingService,
+    }),
+  ],
+  exports: [RouterModule],
 })
-export class AppRoutingModule {
-}
+export class AppRoutingModule {}

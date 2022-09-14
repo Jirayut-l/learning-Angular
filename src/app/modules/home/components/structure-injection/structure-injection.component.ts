@@ -5,13 +5,15 @@ import { APP_CONFIG, AppConfig, appSettings } from '@shared/config/app';
   selector: 'app-structure-injection',
   templateUrl: './structure-injection.component.html',
   styleUrls: ['./structure-injection.component.scss'],
-  providers: [{
-    provide: APP_CONFIG,
-    useValue: appSettings
-  }]
+  providers: [
+    {
+      provide: APP_CONFIG,
+      useValue: appSettings,
+    },
+  ],
 })
 export class StructureInjectionComponent {
-  title: string = "";
+  title: string = '';
   version: number = 0;
 
   constructor(@Inject(APP_CONFIG) config: AppConfig) {

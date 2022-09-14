@@ -6,9 +6,8 @@ describe('SizerComponent', () => {
   let fixture: ComponentFixture<SizerComponent>;
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [SizerComponent]
-    })
-      .compileComponents();
+      declarations: [SizerComponent],
+    }).compileComponents();
   });
   beforeEach(() => {
     fixture = TestBed.createComponent(SizerComponent);

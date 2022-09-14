@@ -1,1 +1,1 @@
-export * from "./hero-favorite.service";
+export * from './hero-favorite.service';

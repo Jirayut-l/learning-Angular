@@ -6,9 +6,8 @@ describe('AliasingComponent', () => {
   let fixture: ComponentFixture<AliasingComponent>;
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [AliasingComponent]
-    })
-      .compileComponents();
+      declarations: [AliasingComponent],
+    }).compileComponents();
   });
   beforeEach(() => {
     fixture = TestBed.createComponent(AliasingComponent);

@@ -6,16 +6,17 @@ import { Product } from '@shared/models/Product';
   selector: 'app-product-providers',
   templateUrl: './product-providers.component.html',
   styleUrls: ['./product-providers.component.scss'],
-  providers: [{
-    provide: ProductService,
-    useClass: FakeProductService
-  }]
+  providers: [
+    {
+      provide: ProductService,
+      useClass: FakeProductService,
+    },
+  ],
 })
 export class ProductProvidersComponent implements OnInit {
   products: Product[] = [];
 
-  constructor(private productService: ProductService) {
-  }
+  constructor(private productService: ProductService) {}
 
   ngOnInit(): void {
     this.products = this.productService.getProduct();

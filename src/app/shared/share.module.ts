@@ -15,7 +15,7 @@ import { SelectDropdownComponent } from '@shared/components/select-dropdown/sele
     NumericDirective,
     PermissionDirective,
     SortPipe,
-    SelectDropdownComponent
+    SelectDropdownComponent,
   ],
   exports: [
     AppHighLightDirective,
@@ -23,12 +23,8 @@ import { SelectDropdownComponent } from '@shared/components/select-dropdown/sele
     NumericDirective,
     PermissionDirective,
     SortPipe,
-    SelectDropdownComponent
+    SelectDropdownComponent,
   ],
-  imports: [
-    CommonModule,
-    ReactiveFormsModule
-  ]
+  imports: [CommonModule, ReactiveFormsModule],
 })
-export class ShareModule {
-}
+export class ShareModule {}

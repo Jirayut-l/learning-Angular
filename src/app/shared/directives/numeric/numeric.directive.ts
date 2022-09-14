@@ -1,10 +1,10 @@
 import { Directive, HostBinding, HostListener } from '@angular/core';
 
 @Directive({
-  selector: '[appNumeric]'
+  selector: '[appNumeric]',
 })
 export class NumericDirective {
-  @HostBinding('class') currentClass: string = "";
+  @HostBinding('class') currentClass: string = '';
 
   @HostListener('keypress', ['$event'])
   onKeyPress(event: KeyboardEvent): void {

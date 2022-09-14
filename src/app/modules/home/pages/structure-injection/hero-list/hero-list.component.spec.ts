@@ -6,9 +6,8 @@ describe('HeroListComponent', () => {
   let fixture: ComponentFixture<HeroListComponent>;
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [HeroListComponent]
-    })
-      .compileComponents();
+      declarations: [HeroListComponent],
+    }).compileComponents();
   });
   beforeEach(() => {
     fixture = TestBed.createComponent(HeroListComponent);

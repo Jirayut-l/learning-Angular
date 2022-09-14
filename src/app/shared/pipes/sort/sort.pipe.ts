@@ -2,7 +2,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 import { Hero } from '../../models/Hero';
 
 @Pipe({
-  name: 'sort'
+  name: 'sort',
 })
 export class SortPipe implements PipeTransform {
   transform(value: Hero[], args: string): Hero[] {

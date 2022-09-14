@@ -7,9 +7,8 @@ describe('NavigateHeroListComponent', () => {
   let enrichHeroService: EnrichHeroService;
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [NavigateHeroListComponent]
-    })
-      .compileComponents();
+      declarations: [NavigateHeroListComponent],
+    }).compileComponents();
   });
   beforeEach(() => {
     component = new NavigateHeroListComponent(enrichHeroService);

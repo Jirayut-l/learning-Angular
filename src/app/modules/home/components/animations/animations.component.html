@@ -1,15 +1,12 @@
 <h1>Animations</h1>
 
-<input type="checkbox"
-       id="animation-toggle"
-       [checked]="!animationsDisabled"
-       (click)="toggleAnimations()">
+<input type="checkbox" id="animation-toggle" [checked]="!animationsDisabled" (click)="toggleAnimations()" />
 <label class="ms-2" for="animation-toggle">Toggle All Animations</label>`
 
 <nav>
   <a id="home" routerLink="/animations/homeanimation" routerLinkActive="active" aria-current="page">Home</a>
   <a id="about" routerLink="/animations/aboutanimation" routerLinkActive="active" aria-current="page">About</a>
-  <a id="open-close" routerLink="/animations/open-close" routerLinkActive="active"  aria-current="page">Open/Close</a>
+  <a id="open-close" routerLink="/animations/open-close" routerLinkActive="active" aria-current="page">Open/Close</a>
   <!--  <a id="status" routerLink="/status" routerLinkActive="active" ariaCurrentWhenActive="page">Status Slider</a>-->
   <!--  <a id="toggle" routerLink="/toggle" routerLinkActive="active" ariaCurrentWhenActive="page">Toggle Animations</a>-->
   <!--  <a id="enter-leave" routerLink="/enter-leave" routerLinkActive="active" ariaCurrentWhenActive="page">Enter/Leave</a>-->

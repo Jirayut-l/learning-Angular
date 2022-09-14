@@ -1,1 +1,1 @@
-export * from "./in-the-metadata.component";
+export * from './in-the-metadata.component';

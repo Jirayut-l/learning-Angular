@@ -5,13 +5,12 @@ import { Hero } from '@shared/models/Hero';
 import { Observable } from 'rxjs';
 
 @Injectable({
-    providedIn: 'root'
+  providedIn: 'root',
 })
 export class EnrichHeroResolverAllService implements Resolve<Hero[]> {
-    constructor(private enrichHeroService: EnrichHeroService) {
-    }
+  constructor(private enrichHeroService: EnrichHeroService) {}
 
-    resolve(): Observable<Hero[]> {
-        return this.enrichHeroService.getHeroes();
-    }
+  resolve(): Observable<Hero[]> {
+    return this.enrichHeroService.getHeroes();
+  }
 }

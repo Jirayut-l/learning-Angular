@@ -1,1 +1,1 @@
-export * from "./share-callback-method.component";
+export * from './share-callback-method.component';

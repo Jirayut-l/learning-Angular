@@ -5,38 +5,37 @@ import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 
 @Injectable({
-    providedIn: 'root'
+  providedIn: 'root',
 })
 export class EnrichHeroService {
-    private heroesUrl = 'api/heroes/';
+  private heroesUrl = 'api/heroes/';
 
-    constructor(private http: HttpClient) {
-    }
+  constructor(private http: HttpClient) {}
 
-    public getHeroes(): Observable<Hero[]> {
-        return this.http.get<Hero[]>(this.heroesUrl).pipe(
-            retry(2),
-            catchError((error: HttpErrorResponse) => {
-                console.log(error)
-                return throwError(() => error);
-            })
-        );
-    }
+  public getHeroes(): Observable<Hero[]> {
+    return this.http.get<Hero[]>(this.heroesUrl).pipe(
+      retry(2),
+      catchError((error: HttpErrorResponse) => {
+        console.log(error);
+        return throwError(() => error);
+      })
+    );
+  }
 
-    public createHero(name: string): Observable<Hero> {
-        const hero = { name };
-        return this.http.post<Hero>(this.heroesUrl, hero);
-    }
+  public createHero(name: string): Observable<Hero> {
+    const hero = { name };
+    return this.http.post<Hero>(this.heroesUrl, hero);
+  }
 
-    public editHero(id: number, hero: Hero): Observable<unknown> {
-        return this.http.put(`${this.heroesUrl}${id}`, hero);
-    }
+  public editHero(id: number, hero: Hero): Observable<unknown> {
+    return this.http.put(`${this.heroesUrl}${id}`, hero);
+  }
 
-    public deleteHero(id: number): Observable<unknown> {
-        return this.http.delete(`${this.heroesUrl}${id}`);
-    }
+  public deleteHero(id: number): Observable<unknown> {
+    return this.http.delete(`${this.heroesUrl}${id}`);
+  }
 
-    public getHero(id: number): Observable<Hero> {
-        return this.http.get<Hero>(`${this.heroesUrl}${id}`);
-    }
+  public getHero(id: number): Observable<Hero> {
+    return this.http.get<Hero>(`${this.heroesUrl}${id}`);
+  }
 }

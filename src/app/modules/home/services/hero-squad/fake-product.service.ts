@@ -3,7 +3,7 @@ import { Product } from '@shared/models/Product';
 import { ProductService } from './product.service';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class FakeProductService extends ProductService {
   override getProduct(): Product[] {
@@ -13,6 +13,6 @@ export class FakeProductService extends ProductService {
       { productId: 3, name: 'Power Bank', price: 100 },
       { productId: 4, name: 'Laptop', price: 10000 },
       { productId: 5, name: 'Desktop', price: 25600 },
-    ]
+    ];
   }
 }

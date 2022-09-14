@@ -4,7 +4,7 @@ import { Hero } from '@shared/models/Hero';
 @Component({
   selector: 'app-switching-templates',
   templateUrl: './switching-templates.component.html',
-  styleUrls: ['./switching-templates.component.scss']
+  styleUrls: ['./switching-templates.component.scss'],
 })
 export class SwitchingTemplatesComponent {
   public heroes: Hero[] = [

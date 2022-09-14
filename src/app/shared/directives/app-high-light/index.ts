@@ -1,1 +1,1 @@
-export * from "./app-high-light.directive";
+export * from './app-high-light.directive';

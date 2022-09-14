@@ -6,9 +6,8 @@ describe('ShareCallbackMethodComponent', () => {
   let fixture: ComponentFixture<ShareCallbackMethodComponent>;
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ShareCallbackMethodComponent]
-    })
-      .compileComponents();
+      declarations: [ShareCallbackMethodComponent],
+    }).compileComponents();
   });
   beforeEach(() => {
     fixture = TestBed.createComponent(ShareCallbackMethodComponent);

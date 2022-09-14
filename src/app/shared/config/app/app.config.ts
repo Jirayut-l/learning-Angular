@@ -8,5 +8,5 @@ export interface AppConfig {
 export const APP_CONFIG = new InjectionToken<AppConfig>('app.config');
 export const appSettings: AppConfig = {
   title: 'My app',
-  version: 1.0
+  version: 1.0,
 };

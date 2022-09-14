@@ -13,7 +13,7 @@ describe('EnrichHeroListComponent', () => {
   //     .compileComponents();
   // });
   beforeEach(() => {
-    component = new EnrichHeroListComponent(new EnrichHeroService(http))
+    component = new EnrichHeroListComponent(new EnrichHeroService(http));
     // fixture = TestBed.createComponent(EnrichHeroListComponent);
     // component = fixture.componentInstance;
     // fixture.detectChanges();

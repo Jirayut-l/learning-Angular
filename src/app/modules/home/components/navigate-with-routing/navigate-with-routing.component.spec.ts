@@ -6,9 +6,8 @@ describe('NavigateWithRoutingComponent', () => {
   let fixture: ComponentFixture<NavigateWithRoutingComponent>;
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [NavigateWithRoutingComponent]
-    })
-      .compileComponents();
+      declarations: [NavigateWithRoutingComponent],
+    }).compileComponents();
   });
   beforeEach(() => {
     fixture = TestBed.createComponent(NavigateWithRoutingComponent);

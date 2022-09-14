@@ -6,9 +6,8 @@ describe('InputOutputComponent', () => {
   let fixture: ComponentFixture<InputOutputComponent>;
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [InputOutputComponent]
-    })
-      .compileComponents();
+      declarations: [InputOutputComponent],
+    }).compileComponents();
   });
   beforeEach(() => {
     fixture = TestBed.createComponent(InputOutputComponent);

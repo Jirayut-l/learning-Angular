@@ -5,18 +5,8 @@ import { EnrichHeroListComponent } from '@home/pages/enrich-components/enrich-he
 import { KeyLoggerComponent } from '@home/pages/enrich-components/key-logger/key-logger.component';
 
 @NgModule({
-  declarations: [
-    EnrichHeroListComponent,
-    KeyLoggerComponent
-  ],
-  exports: [
-    EnrichHeroListComponent,
-    KeyLoggerComponent
-  ],
-  imports: [
-    CommonModule,
-    FormsModule
-  ]
+  declarations: [EnrichHeroListComponent, KeyLoggerComponent],
+  exports: [EnrichHeroListComponent, KeyLoggerComponent],
+  imports: [CommonModule, FormsModule],
 })
-export class EnrichComponentsModule {
-}
+export class EnrichComponentsModule {}

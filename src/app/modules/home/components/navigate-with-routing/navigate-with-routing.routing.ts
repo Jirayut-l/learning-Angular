@@ -7,7 +7,7 @@ import { EnrichHeroResolverService } from '@home/services/enrich-components';
 export const NavigateWithRoutingRouting: Routes = [
   {
     path: 'heroes',
-    component: NavigateHeroListComponent
+    component: NavigateHeroListComponent,
   },
   {
     path: 'hero/:id',
@@ -15,7 +15,7 @@ export const NavigateWithRoutingRouting: Routes = [
     canActivate: [AuthGuard],
     canDeactivate: [ConfirmGuard],
     resolve: {
-      hero: EnrichHeroResolverService
-    }
-  }
+      hero: EnrichHeroResolverService,
+    },
+  },
 ];

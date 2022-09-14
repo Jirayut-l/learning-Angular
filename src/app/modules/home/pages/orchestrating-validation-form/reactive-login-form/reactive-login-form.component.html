@@ -1,79 +1,94 @@
 <h3>Reactive forms</h3>
 <form (ngSubmit)="login()" [formGroup]="loginForm">
-    <div class="mb-2">
-        <label class="form-label">Username</label>
-        <input formControlName="username" class="form-control" name="username" placeholder="Username" required
-               type="text">
-        <ng-container *ngIf="username.touched && username.invalid">
-            <span class="help-block">The username is not valid</span>
-        </ng-container>
-    </div>
+  <div class="mb-2">
+    <label class="form-label">Username</label>
+    <input
+      formControlName="username"
+      class="form-control"
+      name="username"
+      placeholder="Username"
+      required
+      type="text" />
+    <ng-container *ngIf="username.touched && username.invalid">
+      <span class="help-block">The username is not valid</span>
+    </ng-container>
+  </div>
 
-    <div class="mb-2">
-        <label class="form-label">Password</label>
-        <input formControlName="password" class="form-control" name="password" placeholder="Password" required
-               type="password">
+  <div class="mb-2">
+    <label class="form-label">Password</label>
+    <input
+      formControlName="password"
+      class="form-control"
+      name="password"
+      placeholder="Password"
+      required
+      type="password" />
 
-        <span *ngIf="password.touched && password.errors?.['required']"
-              class="help-block">The password is required</span>
-        <span *ngIf="password.touched && password.errors?.['minlength']"
-              class="help-block">The password is too short</span>
-        <span *ngIf="showPasswordHint">Password should be minimum six characters long</span>
-        <span *ngIf="password.touched && password.errors?.['invalid']"
-              class="help-block">Incorrect password Try again</span>
-    </div>
+    <span *ngIf="password.touched && password.errors?.['required']" class="help-block">The password is required</span>
+    <span *ngIf="password.touched && password.errors?.['minlength']" class="help-block">The password is too short</span>
+    <span *ngIf="showPasswordHint">Password should be minimum six characters long</span>
+    <span *ngIf="password.touched && password.errors?.['invalid']" class="help-block"
+      >Incorrect password Try again</span
+    >
+  </div>
 
-    <div class="mb-2">
-        <label class="form-label">Prefix</label>
-        <app-select-dropdown [listData]="prefixList" [formGroup]="prefixCode"></app-select-dropdown>
-    </div>
+  <div class="mb-2">
+    <label class="form-label">Prefix</label>
+    <app-select-dropdown [listData]="prefixList" [formGroup]="prefixCode"></app-select-dropdown>
+  </div>
 
-    <div class="form-check">
-        <input class="form-check-input" type="radio" name="valueX" value="yes" id="flexRadioDefault1"
-               formControlName="valueX">
-        <label class="form-check-label" for="flexRadioDefault1">
-            Yes
-        </label>
-    </div>
-    <div class="form-check">
-        <input class="form-check-input" type="radio" name="valueX" value="no" id="flexRadioDefault2"
-               formControlName="valueX">
-        <label class="form-check-label" for="flexRadioDefault2">
-            No
-        </label>
-    </div>
+  <div class="form-check">
+    <input
+      class="form-check-input"
+      type="radio"
+      name="valueX"
+      value="yes"
+      id="flexRadioDefault1"
+      formControlName="valueX" />
+    <label class="form-check-label" for="flexRadioDefault1"> Yes </label>
+  </div>
+  <div class="form-check">
+    <input
+      class="form-check-input"
+      type="radio"
+      name="valueX"
+      value="no"
+      id="flexRadioDefault2"
+      formControlName="valueX" />
+    <label class="form-check-label" for="flexRadioDefault2"> No </label>
+  </div>
 
-    <div class="form-group form-check">
-        <input type="checkbox" formControlName="status" id="acceptTerms" class="form-check-input"
-               [ngClass]="{ 'is-invalid': status.errors?.['required'] && status.touched} "/>
-        <label for="acceptTerms" class="form-check-label">Accept Status</label>
-        <span *ngIf="status.errors?.['required']" class="invalid-feedback">
-            Accept Status is required
-        </span>
-    </div>
+  <div class="form-group form-check">
+    <input
+      type="checkbox"
+      formControlName="status"
+      id="acceptTerms"
+      class="form-check-input"
+      [ngClass]="{ 'is-invalid': status.errors?.['required'] && status.touched} " />
+    <label for="acceptTerms" class="form-check-label">Accept Status</label>
+    <span *ngIf="status.errors?.['required']" class="invalid-feedback"> Accept Status is required </span>
+  </div>
 
-    <!--    <button class="btn btn-success" [disabled]="!loginForm.valid" type="submit">Login</button>-->
-    <button class="btn btn-success" type="submit">Login</button>
-    <div>You are trying to login as <b>{{this.username.value}}</b></div>
+  <!--    <button class="btn btn-success" [disabled]="!loginForm.valid" type="submit">Login</button>-->
+  <button class="btn btn-success" type="submit">Login</button>
+  <div>
+    You are trying to login as <b>{{ this.username.value }}</b>
+  </div>
 
-    <!--    <h2>Test Condition DOM</h2>-->
-    <!--    <ng-container *ngIf="status.value==='true'">-->
-    <!--        <p>show True</p>-->
-    <!--    </ng-container>-->
+  <!--    <h2>Test Condition DOM</h2>-->
+  <!--    <ng-container *ngIf="status.value==='true'">-->
+  <!--        <p>show True</p>-->
+  <!--    </ng-container>-->
 
-    <span>Values:</span>{{loginForm.value | json}}
-
+  <span>Values:</span>{{ loginForm.value | json }}
 </form>
 
 <div class="card mt-4 mb-3">
-    <div class="card-header">
-        Reactive Forms By Angular
-    </div>
-    <div class="card-body">
-        <button type="button" class="btn btn-primary btn-lg" (click)="toggleEditor('name')">Name Editor</button>
-        <button type="button" class="btn btn-primary btn-lg" (click)="toggleEditor('profile')">Profile Editor</button>
-        <app-name-editor-form *ngIf="showNameEditor"></app-name-editor-form>
-        <app-profile-editor-form *ngIf="showProfileEditor"></app-profile-editor-form>
-    </div>
+  <div class="card-header">Reactive Forms By Angular</div>
+  <div class="card-body">
+    <button type="button" class="btn btn-primary btn-lg" (click)="toggleEditor('name')">Name Editor</button>
+    <button type="button" class="btn btn-primary btn-lg" (click)="toggleEditor('profile')">Profile Editor</button>
+    <app-name-editor-form *ngIf="showNameEditor"></app-name-editor-form>
+    <app-profile-editor-form *ngIf="showProfileEditor"></app-profile-editor-form>
+  </div>
 </div>
-

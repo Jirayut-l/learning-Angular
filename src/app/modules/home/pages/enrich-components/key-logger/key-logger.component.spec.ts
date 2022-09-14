@@ -6,9 +6,8 @@ describe('KeyLoggerComponent', () => {
   let fixture: ComponentFixture<KeyLoggerComponent>;
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [KeyLoggerComponent]
-    })
-      .compileComponents();
+      declarations: [KeyLoggerComponent],
+    }).compileComponents();
   });
   beforeEach(() => {
     fixture = TestBed.createComponent(KeyLoggerComponent);

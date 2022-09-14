@@ -3,7 +3,7 @@ import { Hero } from '@shared/models/Hero';
 import { HeroService } from '../hero';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class HeroFavoriteService extends HeroService {
   constructor() {

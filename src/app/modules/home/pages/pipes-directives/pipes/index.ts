@@ -1,1 +1,1 @@
-export * from "./pipes.component";
+export * from './pipes.component';

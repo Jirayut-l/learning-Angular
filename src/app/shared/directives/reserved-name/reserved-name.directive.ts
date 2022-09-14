@@ -5,12 +5,12 @@ const heroes = [
   { id: 2, name: 'Drogfisher' },
   { id: 3, name: 'Bloodyllips' },
   { id: 4, name: 'Mr Bu Moverse' },
-  { id: 5, name: 'Piranhaelli' }
+  { id: 5, name: 'Piranhaelli' },
 ];
 
 export function reservedNameValidator(): ValidatorFn {
   return (control: AbstractControl): { [key: string]: boolean } | null => {
     const reserved = heroes.find(hero => hero.name === control.value);
-    return reserved ? { 'reservedName': true } : null;
+    return reserved ? { reservedName: true } : null;
   };
 }

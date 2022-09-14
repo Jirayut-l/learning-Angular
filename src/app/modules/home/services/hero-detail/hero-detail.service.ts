@@ -3,13 +3,12 @@ import { Hero } from '@shared/models/Hero';
 import { HeroService } from '../hero';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class HeroDetailService {
   hero: Hero = {} as Hero;
 
-  constructor(private heroService: HeroService) {
-  }
+  constructor(private heroService: HeroService) {}
 
   public getHero(id: number): Hero {
     const heroes = this.heroService.getHeroes();

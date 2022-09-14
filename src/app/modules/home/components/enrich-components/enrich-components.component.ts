@@ -4,15 +4,15 @@ import { Observable } from 'rxjs';
 @Component({
   selector: 'app-enrich-components',
   templateUrl: './enrich-components.component.html',
-  styleUrls: ['./enrich-components.component.scss']
+  styleUrls: ['./enrich-components.component.scss'],
 })
 export class EnrichComponentsComponent {
   title: string = 'my-app';
   title$: Observable<unknown> = new Observable<unknown>(observer => {
     setInterval(() => {
-      observer.next()
-    }, 2000)
-  })
+      observer.next();
+    }, 2000);
+  });
 
   constructor() {
     this.title$.subscribe(() => this.setTitle());

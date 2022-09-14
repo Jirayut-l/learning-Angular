@@ -6,14 +6,13 @@ import { Subject, takeUntil } from 'rxjs';
 @Component({
   selector: 'app-navigate-hero-list',
   templateUrl: './navigate-hero-list.component.html',
-  styleUrls: ['./navigate-hero-list.component.scss']
+  styleUrls: ['./navigate-hero-list.component.scss'],
 })
 export class NavigateHeroListComponent implements OnInit, OnDestroy {
   heroes: Hero[] = [];
   destroy$ = new Subject();
 
-  constructor(private enrichHeroService: EnrichHeroService) {
-  }
+  constructor(private enrichHeroService: EnrichHeroService) {}
 
   ngOnInit(): void {
     this.getHeroes();
@@ -25,14 +24,16 @@ export class NavigateHeroListComponent implements OnInit, OnDestroy {
   }
 
   public add(name: string): void {
-    this.enrichHeroService.createHero(name)
+    this.enrichHeroService
+      .createHero(name)
       .pipe(takeUntil(this.destroy$))
       .subscribe(hero => this.heroes.push(hero));
   }
 
   public rename(hero: Hero): void {
     const existingHero: Hero = { id: hero.id, name: 'Pricezog', team: '' };
-    this.enrichHeroService.editHero(hero.id, existingHero)
+    this.enrichHeroService
+      .editHero(hero.id, existingHero)
       .pipe(takeUntil(this.destroy$))
       .subscribe(() => {
         const hero = this.heroes.find(hero => hero.id);
@@ -43,7 +44,8 @@ export class NavigateHeroListComponent implements OnInit, OnDestroy {
   }
 
   public remove(hero: Hero): void {
-    this.enrichHeroService.deleteHero(hero.id)
+    this.enrichHeroService
+      .deleteHero(hero.id)
       .pipe(takeUntil(this.destroy$))
       .subscribe(() => {
         this.heroes = this.heroes.filter(selected => selected !== hero);
@@ -51,8 +53,9 @@ export class NavigateHeroListComponent implements OnInit, OnDestroy {
   }
 
   private getHeroes(): void {
-    this.enrichHeroService.getHeroes()
+    this.enrichHeroService
+      .getHeroes()
       .pipe(takeUntil(this.destroy$))
-      .subscribe(res => this.heroes = res);
+      .subscribe(res => (this.heroes = res));
   }
 }

@@ -6,9 +6,8 @@ describe('AboutInfoComponent', () => {
   let fixture: ComponentFixture<AboutInfoComponent>;
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [AboutInfoComponent]
-    })
-      .compileComponents();
+      declarations: [AboutInfoComponent],
+    }).compileComponents();
   });
   beforeEach(() => {
     fixture = TestBed.createComponent(AboutInfoComponent);

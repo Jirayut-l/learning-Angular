@@ -8,7 +8,7 @@ import { Component, EventEmitter } from '@angular/core';
   // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
   inputs: ['clearanceItem'],
   // eslint-disable-next-line @angular-eslint/no-outputs-metadata-property
-  outputs: ['buyEvent']
+  outputs: ['buyEvent'],
 })
 export class InTheMetadataComponent {
   buyEvent = new EventEmitter<string>();

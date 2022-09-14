@@ -6,9 +6,8 @@ describe('InTheMetadataComponent', () => {
   let fixture: ComponentFixture<InTheMetadataComponent>;
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [InTheMetadataComponent]
-    })
-      .compileComponents();
+      declarations: [InTheMetadataComponent],
+    }).compileComponents();
   });
   beforeEach(() => {
     fixture = TestBed.createComponent(InTheMetadataComponent);

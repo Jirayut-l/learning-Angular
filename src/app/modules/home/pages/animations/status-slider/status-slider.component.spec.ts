@@ -8,9 +8,8 @@ describe('StatusSliderComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ StatusSliderComponent ]
-    })
-    .compileComponents();
+      declarations: [StatusSliderComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

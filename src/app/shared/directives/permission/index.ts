@@ -1,1 +1,1 @@
-export * from "./permission.directive";
+export * from './permission.directive';
