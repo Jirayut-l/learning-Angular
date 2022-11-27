@@ -73,6 +73,10 @@ export class ReactiveLoginFormComponent implements OnInit {
     this.editor = type;
   }
 
+  public disableForm(): void {
+    this.loginForm.disable();
+  }
+
   // private buildForm(): void {
   //   this.loginForm = this.builder.group({
   //     username: ['', Validators.required],

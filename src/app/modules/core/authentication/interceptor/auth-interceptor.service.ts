@@ -8,6 +8,8 @@ export class AuthInterceptorService implements HttpInterceptor {
     const authReq = req.clone({
       setHeaders: { Authorization: 'myAuthToken' },
     });
+    console.log('Intercepted HTTP call', authReq);
+    console.log('Intercepted HTTP Head', authReq.headers.get('Authorization'));
     return next.handle(authReq);
   }
 }

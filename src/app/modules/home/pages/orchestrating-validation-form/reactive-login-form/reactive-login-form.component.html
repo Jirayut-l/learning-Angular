@@ -68,9 +68,10 @@
     <label for="acceptTerms" class="form-check-label">Accept Status</label>
     <span *ngIf="status.errors?.['required']" class="invalid-feedback"> Accept Status is required </span>
   </div>
-
+  <button class="btn btn-success mx-4" (click)="disableForm()">Disable</button>
   <!--    <button class="btn btn-success" [disabled]="!loginForm.valid" type="submit">Login</button>-->
   <button class="btn btn-success" type="submit">Login</button>
+
   <div>
     You are trying to login as <b>{{ this.username.value }}</b>
   </div>
