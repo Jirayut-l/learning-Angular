@@ -17,6 +17,11 @@ export class ReactiveLoginFormComponent implements OnInit {
     prefixCode: new FormControl('', Validators.required),
     valueX: new FormControl('', Validators.required),
     status: new FormControl(false, Validators.requiredTrue),
+    // contact: new FormGroup({
+    //   countryCode: new FormControl(''),
+    //   phoneNumber: new FormControl(''),
+    // }
+    contact: new FormControl(''),
   });
   showPasswordHint: boolean = false;
   prefixList: DataDropdownList[] = [
@@ -38,8 +43,8 @@ export class ReactiveLoginFormComponent implements OnInit {
     return this.loginForm.controls['status'];
   }
 
-  get prefixCode(): FormGroup {
-    return this.loginForm.controls['prefixCode'] as FormGroup;
+  get prefixCode(): FormControl {
+    return this.loginForm.controls['prefixCode'] as FormControl;
   }
 
   get showNameEditor(): boolean {
