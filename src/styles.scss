@@ -25,15 +25,21 @@ select.ng-invalid.ng-touched {
   border: 2px solid red;
 }
 
-input.ng-valid.ng-touched, .ng-valid[required].ng-touched,
-textarea.ng-valid.ng-touched, .ng-valid[required].ng-touched,
-select.ng-valid.ng-touched, .ng-valid[required].ng-touched {
+input.ng-valid.ng-touched,
+.ng-valid[required].ng-touched,
+textarea.ng-valid.ng-touched,
+.ng-valid[required].ng-touched,
+select.ng-valid.ng-touched,
+.ng-valid[required].ng-touched {
   border: 2px solid green;
 }
 
-
 .help-block {
-  margin-top: .25rem;
-  font-size: .875em;
+  margin-top: 0.25rem;
+  font-size: 0.875em;
   color: red;
+}
+
+body {
+  font-size: 1.5rem;
 }

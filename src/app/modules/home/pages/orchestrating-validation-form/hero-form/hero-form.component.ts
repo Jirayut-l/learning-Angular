@@ -19,6 +19,8 @@ export class HeroFormComponent {
     powers: new FormArray([]),
     lessons: new FormArray([]),
   });
+  testConditionX = true;
+  testConditionX2 = true;
 
   get powers(): FormArray {
     return this.heroDetails.controls['powers'] as FormArray;

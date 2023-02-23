@@ -19,16 +19,16 @@ export class PhoneInformationComponent implements ControlValueAccessor {
     phoneNumber: new FormControl('', Validators.required),
   });
 
-  registerOnChange(fn: never): void {
+  registerOnChange(fn: any): void {
     console.log('on change', fn);
-    this.contact.valueChanges.subscribe(fn);
+    this.contact.valueChanges.subscribe(res => res === fn);
   }
 
-  registerOnTouched(fn: never): void {
+  registerOnTouched(fn: any): void {
     console.log('on blur', fn);
   }
 
-  writeValue(val: never): void {
+  writeValue(val: any): void {
     val && this.contact.setValue(val, { emitEvent: false });
   }
 }

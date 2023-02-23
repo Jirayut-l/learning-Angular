@@ -5,6 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AuthInterceptorService } from '@core/authentication/interceptor';
 import { CoreModule } from '@core/core.module';
 import { EnrichHeroDataService } from '@home/services/enrich-components';
+import { MyServiceService } from '@shared/service/my-service.service';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,7 +20,7 @@ import { AppComponent } from './app.component';
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(EnrichHeroDataService),
   ],
-  providers: [{ provide: HTTP_INTERCEPTORS, useClass: AuthInterceptorService, multi: true }],
+  providers: [{ provide: HTTP_INTERCEPTORS, useClass: AuthInterceptorService, multi: true }, MyServiceService],
   exports: [],
   bootstrap: [AppComponent],
 })

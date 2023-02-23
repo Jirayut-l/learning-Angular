@@ -93,9 +93,11 @@
 <div class="card mt-4 mb-3">
   <div class="card-header">Reactive Forms By Angular</div>
   <div class="card-body">
-    <button type="button" class="btn btn-primary btn-lg" (click)="toggleEditor('name')">Name Editor</button>
-    <button type="button" class="btn btn-primary btn-lg" (click)="toggleEditor('profile')">Profile Editor</button>
+    <button (click)="toggleEditor('name')" class="btn btn-primary btn-lg" type="button">Name Editor</button>
+    <button (click)="toggleEditor('profile')" class="btn btn-primary btn-lg" type="button">Profile Editor</button>
     <app-name-editor-form *ngIf="showNameEditor"></app-name-editor-form>
     <app-profile-editor-form *ngIf="showProfileEditor"></app-profile-editor-form>
   </div>
 </div>
+
+<button (click)="speak()" class="btn btn-secondary">Test</button>

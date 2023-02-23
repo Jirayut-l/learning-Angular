@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MyServiceService } from '@shared/service/my-service.service';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -14,7 +15,9 @@ export class EnrichComponentsComponent {
     }, 2000);
   });
 
-  constructor() {
+  constructor(private myService: MyServiceService) {
+    myService.form.get('name')?.setValue('name this EnrichComponentsComponent');
+    console.log(myService.valueX, myService.valueY, myService.name, myService.form);
     this.title$.subscribe(() => this.setTitle());
   }
 

@@ -44,6 +44,12 @@ export const ROUTES: RouteInfo[] = [
     icon: 'bi bi-input-cursor',
     class: '',
   },
+  {
+    path: '/about',
+    title: 'About',
+    icon: 'bi bi-input-cursor',
+    class: '',
+  },
 ];
 
 @Component({

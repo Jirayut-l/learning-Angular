@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HeroService } from '@home/services/hero';
 import { Hero } from '@shared/models/Hero';
+import { MyServiceService } from '@shared/service/my-service.service';
 
 @Component({
   selector: 'app-input-output',
@@ -20,7 +21,9 @@ export class InputOutputComponent implements OnInit {
   fontSizeOneWayPx: number = 20;
   name = 'Spectrum';
 
-  constructor(private heroService: HeroService) {}
+  constructor(private heroService: HeroService, private myService: MyServiceService) {
+    console.log(myService.valueX, myService.valueY, myService.name, myService.form);
+  }
 
   ngOnInit(): void {
     this.heroes = this.heroService.getHeroes();
